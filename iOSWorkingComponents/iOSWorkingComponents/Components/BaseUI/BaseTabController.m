@@ -7,6 +7,7 @@
 //
 
 #import "BaseTabController.h"
+#import "Headers.h"
 
 @interface BaseTabController ()
 @property (nonatomic, strong)UILabel *numberLabel;

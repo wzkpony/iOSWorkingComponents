@@ -7,7 +7,7 @@
 //
 
 #import "BaseNavigationController.h"
-#import "ColorConfig.h"
+#import "Headers.h"
 
 @interface BaseNavigationController ()<UINavigationBarDelegate,UIGestureRecognizerDelegate>
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "Headers.h"
 
 
 @interface BaseViewController ()<UIGestureRecognizerDelegate>

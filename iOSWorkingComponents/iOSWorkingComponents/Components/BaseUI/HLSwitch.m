@@ -7,6 +7,7 @@
 //
 
 #import "HLSwitch.h"
+#import "Headers.h"
 
 @implementation HLSwitch
 

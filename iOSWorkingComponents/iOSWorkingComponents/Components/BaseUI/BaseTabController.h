@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Headers.h"
 #import "BaseNavigationController.h"
 
 @interface BaseTabController : UITabBarController

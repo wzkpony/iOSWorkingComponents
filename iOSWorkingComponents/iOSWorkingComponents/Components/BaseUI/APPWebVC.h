@@ -5,8 +5,7 @@
 //  Created by Felix on 2018/7/11.
 //  Copyright © 2018年 Adinnet. All rights reserved.
 //
-#import "Headers.h"
-#import "WebViewJavascriptBridge.h"
+#import <WebViewJavascriptBridge/WebViewJavascriptBridge.h>
 //定义枚举类型
 typedef enum URLType {
     URLNet  = 0,

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Headers.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HLSwitch : UISwitch

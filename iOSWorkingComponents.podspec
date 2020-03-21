@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "iOSWorkingComponents"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "iOSWorkingComponentsiOS开发组件"
 
   # This description is used to generate tags and improve search results.
@@ -64,10 +64,10 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-   spec.platform     = :ios, "8.0"
+  # spec.platform     = :ios, "8.0"
 
   #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
+   spec.ios.deployment_target = "8.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
@@ -79,7 +79,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/wzkpony/iOSWorkingComponents.git", :tag => "0.0.2" }
+  spec.source       = { :git => "https://github.com/wzkpony/iOSWorkingComponents.git", :tag => "0.0.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -133,10 +133,10 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   #第三方库依赖 
-   spec.dependency 'WMPageController', '2.3.0'
-   spec.dependency 'JKCategories',' 1.8.1'
-   spec.dependency 'WebViewJavascriptBridge', '~> 6.0' 
-   spec.dependency 'Masonry' 
+   spec.ios.dependency 'WMPageController', '2.3.0'
+   spec.ios.dependency 'JKCategories',' 1.8.1'
+   spec.ios.dependency 'WebViewJavascriptBridge', '~> 6.0' 
+   spec.ios.dependency 'Masonry' 
 
 
 end

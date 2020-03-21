@@ -7,6 +7,8 @@
 //
 
 #import "APPWebVC.h"
+#import "Headers.h"
+
 //#import "WebKit/WebKit.h"
 @interface APPWebVC ()<UIWebViewDelegate,WKNavigationDelegate,UIScrollViewDelegate>
 @property (strong,nonatomic) UIProgressView *progressView;
