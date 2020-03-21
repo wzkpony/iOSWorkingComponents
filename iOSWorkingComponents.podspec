@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
   spec.description  = "iOSWorkingComponents是一款iOS开发常用工具，以组建方式存在，目前版本逐渐完善。
 			iOSWorkingComponents是公共组建，从而提高工作效率。"
 
-  spec.homepage     = "http://EXAMPLE/iOSWorkingComponents"
+  spec.homepage     = "https://github.com/wzkpony/iOSWorkingComponents"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,8 +38,8 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # spec.license      = "MIT (example)"
+   spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -52,10 +52,10 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "WPony" => "" }
-  # Or just: spec.author    = "WPony"
-  # spec.authors            = { "WPony" => "" }
-  # spec.social_media_url   = "https://twitter.com/WPony"
+  spec.author             = { "Pony" => "1477867638@qq.com" }
+  # Or just: spec.author    = "Pony"
+  # spec.authors            = { "Pony" => "" }
+  # spec.social_media_url   = "https://twitter.com/Pony"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -64,7 +64,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+   spec.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -79,7 +79,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/iOSWorkingComponents.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/wzkpony/iOSWorkingComponents.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +90,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "iOSWorkingComponents/iOSWorkingComponents/Components/**/*.{h,m}"
+  #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -129,7 +129,7 @@ Pod::Spec.new do |spec|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # spec.requires_arc = true
+   spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"

@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D59F5C12425E2D70089776D /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D59F5B12425E2D70089776D /* BaseTableViewCell.m */; };
+		1D59F5C22425E2D70089776D /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D59F5B32425E2D70089776D /* BaseView.m */; };
+		1D59F5C32425E2D70089776D /* APPWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D59F5B42425E2D70089776D /* APPWebVC.m */; };
+		1D59F5C42425E2D70089776D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D59F5B52425E2D70089776D /* BaseViewController.m */; };
+		1D59F5C52425E2D70089776D /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D59F5B62425E2D70089776D /* BaseNavigationController.m */; };
+		1D59F5C62425E2D70089776D /* HLSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D59F5B72425E2D70089776D /* HLSwitch.m */; };
+		1D59F5C72425E2D70089776D /* JMPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D59F5B82425E2D70089776D /* JMPageVC.m */; };
+		1D59F5C82425E2D70089776D /* BaseTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D59F5B92425E2D70089776D /* BaseTabController.m */; };
 		1D7E72D32425DDEA003CB0C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E72D22425DDEA003CB0C2 /* AppDelegate.m */; };
 		1D7E72D62425DDEA003CB0C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E72D52425DDEA003CB0C2 /* ViewController.m */; };
 		1D7E72D92425DDEA003CB0C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7E72D72425DDEA003CB0C2 /* Main.storyboard */; };
@@ -23,6 +31,23 @@
 		1D59F5AC2425DEED0089776D /* ColorConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorConfig.h; sourceTree = "<group>"; };
 		1D59F5AD2425DEED0089776D /* CustomConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomConst.h; sourceTree = "<group>"; };
 		1D59F5AE2425DEED0089776D /* RequestPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestPath.h; sourceTree = "<group>"; };
+		1D59F5B12425E2D70089776D /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		1D59F5B22425E2D70089776D /* BaseTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabController.h; sourceTree = "<group>"; };
+		1D59F5B32425E2D70089776D /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
+		1D59F5B42425E2D70089776D /* APPWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPWebVC.m; sourceTree = "<group>"; };
+		1D59F5B52425E2D70089776D /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		1D59F5B62425E2D70089776D /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		1D59F5B72425E2D70089776D /* HLSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLSwitch.m; sourceTree = "<group>"; };
+		1D59F5B82425E2D70089776D /* JMPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMPageVC.m; sourceTree = "<group>"; };
+		1D59F5B92425E2D70089776D /* BaseTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabController.m; sourceTree = "<group>"; };
+		1D59F5BA2425E2D70089776D /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		1D59F5BB2425E2D70089776D /* APPWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPWebVC.h; sourceTree = "<group>"; };
+		1D59F5BC2425E2D70089776D /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
+		1D59F5BD2425E2D70089776D /* HLSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSwitch.h; sourceTree = "<group>"; };
+		1D59F5BE2425E2D70089776D /* JMPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMPageVC.h; sourceTree = "<group>"; };
+		1D59F5BF2425E2D70089776D /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		1D59F5C02425E2D70089776D /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		1D59F5C92425E56F0089776D /* Headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
 		1D7E72CE2425DDEA003CB0C2 /* iOSWorkingComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSWorkingComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D7E72D12425DDEA003CB0C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D7E72D22425DDEA003CB0C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,9 +91,34 @@
 		1D59F5AF2425DEF90089776D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1D59F5B02425E2D70089776D /* BaseUI */,
 				1D59F5A82425DEED0089776D /* AppConfig */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		1D59F5B02425E2D70089776D /* BaseUI */ = {
+			isa = PBXGroup;
+			children = (
+				1D59F5B12425E2D70089776D /* BaseTableViewCell.m */,
+				1D59F5B32425E2D70089776D /* BaseView.m */,
+				1D59F5B42425E2D70089776D /* APPWebVC.m */,
+				1D59F5B52425E2D70089776D /* BaseViewController.m */,
+				1D59F5B62425E2D70089776D /* BaseNavigationController.m */,
+				1D59F5B72425E2D70089776D /* HLSwitch.m */,
+				1D59F5B82425E2D70089776D /* JMPageVC.m */,
+				1D59F5B92425E2D70089776D /* BaseTabController.m */,
+				1D59F5B22425E2D70089776D /* BaseTabController.h */,
+				1D59F5BA2425E2D70089776D /* BaseTableViewCell.h */,
+				1D59F5BB2425E2D70089776D /* APPWebVC.h */,
+				1D59F5BC2425E2D70089776D /* BaseView.h */,
+				1D59F5BD2425E2D70089776D /* HLSwitch.h */,
+				1D59F5BE2425E2D70089776D /* JMPageVC.h */,
+				1D59F5BF2425E2D70089776D /* BaseNavigationController.h */,
+				1D59F5C02425E2D70089776D /* BaseViewController.h */,
+				1D59F5C92425E56F0089776D /* Headers.h */,
+			);
+			path = BaseUI;
 			sourceTree = "<group>";
 		};
 		1D7E72C52425DDEA003CB0C2 = {
@@ -134,6 +184,7 @@
 				1D7E72CA2425DDEA003CB0C2 /* Sources */,
 				1D7E72CB2425DDEA003CB0C2 /* Frameworks */,
 				1D7E72CC2425DDEA003CB0C2 /* Resources */,
+				FD8947288056786D0462CE60 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,6 +263,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FD8947288056786D0462CE60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSWorkingComponents/Pods-iOSWorkingComponents-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSWorkingComponents/Pods-iOSWorkingComponents-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSWorkingComponents/Pods-iOSWorkingComponents-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -219,9 +287,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D59F5C12425E2D70089776D /* BaseTableViewCell.m in Sources */,
 				1D7E72D62425DDEA003CB0C2 /* ViewController.m in Sources */,
+				1D59F5C22425E2D70089776D /* BaseView.m in Sources */,
 				1D7E72E12425DDEB003CB0C2 /* main.m in Sources */,
+				1D59F5C72425E2D70089776D /* JMPageVC.m in Sources */,
+				1D59F5C52425E2D70089776D /* BaseNavigationController.m in Sources */,
 				1D7E72D32425DDEA003CB0C2 /* AppDelegate.m in Sources */,
+				1D59F5C82425E2D70089776D /* BaseTabController.m in Sources */,
+				1D59F5C42425E2D70089776D /* BaseViewController.m in Sources */,
+				1D59F5C62425E2D70089776D /* HLSwitch.m in Sources */,
+				1D59F5C32425E2D70089776D /* APPWebVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

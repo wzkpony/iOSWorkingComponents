@@ -3,5 +3,9 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'iOSWorkingComponents' do
+  pod 'WMPageController', '2.3.0' #pageViewController,测划翻页。
+  pod 'JKCategories',' 1.8.1'#扩展类
+  pod 'WebViewJavascriptBridge', '~> 6.0' #H5对接js框架
+  pod 'Masonry'#layout布局
 
 end
