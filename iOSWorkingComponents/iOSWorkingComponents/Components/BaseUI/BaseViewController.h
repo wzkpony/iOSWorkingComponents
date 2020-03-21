@@ -7,6 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SizeConst.h"
+#import "ColorConfig.h"
+#import "AppKeyConst.h"
+#import "FontConfig.h"
+#import "RequestPath.h"
+#import "CustomConst.h"
 
 @interface BaseViewController : UIViewController
 /**多返回的页面深度*/
