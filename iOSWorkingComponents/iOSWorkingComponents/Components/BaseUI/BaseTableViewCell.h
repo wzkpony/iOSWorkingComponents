@@ -7,14 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CustomConst.h"
-
-#import "SizeConst.h"
-#import "ColorConfig.h"
-#import "AppKeyConst.h"
-#import "FontConfig.h"
-#import "RequestPath.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseTableViewCell : UITableViewCell

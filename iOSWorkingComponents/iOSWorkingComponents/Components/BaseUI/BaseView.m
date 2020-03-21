@@ -7,8 +7,13 @@
 //
 
 #import "BaseView.h"
+#import "CustomConst.h"
 #import <JKCategories/JKCategories.h>
-
+#import "SizeConst.h"
+#import "ColorConfig.h"
+#import "AppKeyConst.h"
+#import "FontConfig.h"
+#import "RequestPath.h"
 #import <Masonry/Masonry.h>
 
 @implementation BaseView
