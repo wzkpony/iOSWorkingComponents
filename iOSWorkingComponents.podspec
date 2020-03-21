@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "iOSWorkingComponents"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.5"
   spec.summary      = "iOSWorkingComponentsiOS开发组件"
 
   # This description is used to generate tags and improve search results.
@@ -79,7 +79,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/wzkpony/iOSWorkingComponents.git", :tag => "0.0.3" }
+  spec.source       = { :git => "https://github.com/wzkpony/iOSWorkingComponents.git", :tag => "0.0.5" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,7 +90,17 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "iOSWorkingComponents/iOSWorkingComponents/Components/**/*.{h,m}"
+  spec.source_files  = "iOSWorkingComponents/iOSWorkingComponents/Components/*.{h,m}"
+#BaseUI目录
+    spec.subspec 'BaseUI' do |ss|
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/BaseUI/*.{h,m}'
+    end
+#AppConfig目录
+    spec.subspec 'AppConfig' do |ss|
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/AppConfig/*.{h,m}'
+    end
+
+
   #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"

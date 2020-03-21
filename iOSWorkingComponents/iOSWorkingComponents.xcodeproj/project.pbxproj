@@ -47,6 +47,7 @@
 		1D59F5BE2425E2D70089776D /* JMPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMPageVC.h; sourceTree = "<group>"; };
 		1D59F5BF2425E2D70089776D /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		1D59F5C02425E2D70089776D /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		1D59F5CA242671AB0089776D /* ComponentsHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComponentsHeader.h; sourceTree = "<group>"; };
 		1D7E72CE2425DDEA003CB0C2 /* iOSWorkingComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSWorkingComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D7E72D12425DDEA003CB0C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D7E72D22425DDEA003CB0C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		1D59F5AF2425DEF90089776D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1D59F5CA242671AB0089776D /* ComponentsHeader.h */,
 				1D59F5B02425E2D70089776D /* BaseUI */,
 				1D59F5A82425DEED0089776D /* AppConfig */,
 			);
