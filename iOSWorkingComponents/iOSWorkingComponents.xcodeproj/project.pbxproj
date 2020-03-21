@@ -75,25 +75,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1D59F5A82425DEED0089776D /* AppConfig */ = {
+		1D59F5AF2425DEF90089776D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1D59F5CA242671AB0089776D /* ComponentsHeader.h */,
 				1D59F5A92425DEED0089776D /* SizeConst.h */,
 				1D59F5AA2425DEED0089776D /* AppKeyConst.h */,
 				1D59F5AB2425DEED0089776D /* FontConfig.h */,
 				1D59F5AC2425DEED0089776D /* ColorConfig.h */,
 				1D59F5AD2425DEED0089776D /* CustomConst.h */,
 				1D59F5AE2425DEED0089776D /* RequestPath.h */,
-			);
-			path = AppConfig;
-			sourceTree = "<group>";
-		};
-		1D59F5AF2425DEF90089776D /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				1D59F5CA242671AB0089776D /* ComponentsHeader.h */,
 				1D59F5B02425E2D70089776D /* BaseUI */,
-				1D59F5A82425DEED0089776D /* AppConfig */,
 			);
 			path = Components;
 			sourceTree = "<group>";
