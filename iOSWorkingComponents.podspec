@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "iOSWorkingComponents"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "iOSWorkingComponentsiOS开发组件"
 
   # This description is used to generate tags and improve search results.
@@ -79,7 +79,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/wzkpony/iOSWorkingComponents.git", :tag => "0.0.1" }
+  spec.source       = { :git => "https://github.com/wzkpony/iOSWorkingComponents.git", :tag => "0.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -132,6 +132,11 @@ Pod::Spec.new do |spec|
    spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
+  #第三方库依赖 
+   spec.dependency 'WMPageController', '2.3.0'
+   spec.dependency 'JKCategories',' 1.8.1'
+   spec.dependency 'WebViewJavascriptBridge', '~> 6.0' 
+   spec.dependency 'Masonry' 
+
 
 end
