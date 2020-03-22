@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "iOSWorkingComponents"
-  spec.version      = "0.0.10"
+  spec.version      = "0.1.0"
   spec.summary      = "iOSWorkingComponentsiOS开发组件"
 
   # This description is used to generate tags and improve search results.
@@ -79,7 +79,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/wzkpony/iOSWorkingComponents.git", :tag => "0.0.10" }
+  spec.source       = { :git => "https://github.com/wzkpony/iOSWorkingComponents.git", :tag => "0.1.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -103,17 +103,24 @@ Pod::Spec.new do |spec|
     ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/BaseUI/*.{h,m}'
     end
 
+#HUD目录
+    spec.subspec 'HUD' do |ss|
+    ss.dependency 'iOSWorkingComponents/AppConfig'
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/HUD/MBProgressHUD+LL/*.{h,m}'
+    end
+
 #Categories目录
     spec.subspec 'Categories' do |ss|
     ss.dependency 'iOSWorkingComponents/AppConfig'
-    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/Categories/**.{h,m}'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/Categories/**/*.{h,m}'
     end
 
 #CalendarView目录
-    spec.subspec 'CalendarView' do |ss|
-    ss.dependency 'iOSWorkingComponents/Categories'
-    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/CalendarView/*.{h,m}'
-    end
+    #spec.subspec 'CalendarView' do |ss|
+    #ss.dependency 'iOSWorkingComponents/Categories'
+    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/CalendarView/*.{h,m}'
+    #end
 
   #spec.exclude_files = "Classes/Exclude"
 
@@ -130,10 +137,11 @@ Pod::Spec.new do |spec|
   # spec.resource  = "icon.png"
   # spec.resources = ['iOSWorkingComponents/iOSWorkingComponents/Components/CalendarView/CalendarView.xib', 'Sounds/*']
 
-    spec.resources    = {
-    'xib' => ['iOSWorkingComponents/iOSWorkingComponents/Components/CalendarView/CalendarView.xib'],
-    'images' => ['iOSWorkingComponents/iOSWorkingComponents/Components/Categories/NumberCalculate/resource/*png']
-  }
+    spec.resources    = [
+    'iOSWorkingComponents/iOSWorkingComponents/Components/CalendarView/CalendarView.xib',
+    'iOSWorkingComponents/iOSWorkingComponents/Components/Categories/NumberCalculate/resource/*png',
+'iOSWorkingComponents/iOSWorkingComponents/Components/HUD/MBProgressHUD+LL/*.bundle'
+  ]
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -165,6 +173,10 @@ Pod::Spec.new do |spec|
    spec.ios.dependency 'JKCategories',' 1.8.1'
    spec.ios.dependency 'WebViewJavascriptBridge', '~> 6.0' 
    spec.ios.dependency 'Masonry' 
+   spec.ios.dependency 'JKCategories',' 1.8.1' 
+   spec.ios.dependency 'FSCalendar' 
+   spec.ios.dependency 'MBProgressHUD','1.1.0'
+
 
 
 end

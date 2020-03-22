@@ -11,9 +11,12 @@
 #import "NSString+NCDate.h"
 #import "NSString+Category.h"
 #import <JKCategories/JKCategories.h>
+#import <FSCalendar/FSCalendar.h>
 
-@interface GPCalendarView ()
+@interface GPCalendarView ()<FSCalendarDataSource,FSCalendarDelegate>
 @property (nonatomic, copy) NSString *selectDateString;
+@property (weak, nonatomic) IBOutlet FSCalendar *calendar;
+
 @end
 @implementation GPCalendarView
 

@@ -7,13 +7,10 @@
 //
 
 #import "BaseView.h"
-#import <FSCalendar.h>
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GPCalendarView : BaseView<FSCalendarDataSource,FSCalendarDelegate>
+@interface GPCalendarView : BaseView
 
-@property (weak, nonatomic) IBOutlet FSCalendar *calendar;
 @property (weak, nonatomic) IBOutlet UIButton *previousButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
