@@ -1,4 +1,37 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - AlipaySDK-iOS (15.6.8)
+  - BMKLocationKit (1.8.5)
+  - BRPickerView (2.1.0):
+    - MJExtension (~> 3.0.13)
+  - Charts (3.4.0):
+    - Charts/Core (= 3.4.0)
+  - Charts/Core (3.4.0)
+  - CocoaLumberjack (3.5.3):
+    - CocoaLumberjack/Core (= 3.5.3)
+  - CocoaLumberjack/Core (3.5.3)
+  - DBCorner (0.1.1)
+  - DZNEmptyDataSet (1.8.1)
+  - FSCalendar (2.8.1)
+  - FTPopOverMenu (2.0.9)
+  - HHRouter (0.1.9)
+  - iCarousel (1.8.3)
+  - IQKeyboardManager (6.5.5)
+  - JCore (2.2.2)
   - JKCategories (1.8.1):
     - JKCategories/CoreData (= 1.8.1)
     - JKCategories/CoreLocation (= 1.8.1)
@@ -142,29 +175,174 @@ PODS:
   - JKCategories/UIKit/UIWebView (1.8.1):
     - JKCategories/UIKit/UIColor
   - JKCategories/UIKit/UIWindow (1.8.1)
+  - JPush (3.3.0):
+    - JCore (< 3.0.0, >= 2.0.0)
+  - LEEAlert (1.2.1)
   - Masonry (1.1.0)
+  - MBProgressHUD (1.1.0)
+  - MJExtension (3.0.17)
+  - MJRefresh (3.3.1)
+  - NullSafe (1.2.3)
+  - pop (1.0.12)
+  - ReactiveObjC (3.1.1)
+  - SAMKeychain (1.5.3)
+  - SDCycleScrollView (1.80):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.6.1):
+    - SDWebImage/Core (= 5.6.1)
+  - SDWebImage/Core (5.6.1)
+  - SGQRCode (3.0.1)
+  - TTGTagCollectionView (1.11.1)
+  - TTTAttributedLabel (2.0.0)
+  - TZImagePickerController (3.3.1)
+  - UMCCommon (2.1.1)
+  - UMCShare/Core (6.9.6):
+    - UMCCommon
+  - UMCShare/Social/ReducedQQ (6.9.6):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedSina (6.9.6):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedWeChat (6.9.6):
+    - UMCCommon
+    - UMCShare/Core
   - WebViewJavascriptBridge (6.0.3)
+  - WechatOpenSDK (1.8.4)
   - WMPageController (2.3.0)
+  - YBImageBrowser (3.0.9):
+    - YBImageBrowser/Core (= 3.0.9)
+  - YBImageBrowser/Core (3.0.9):
+    - SDWebImage (>= 5.0.0)
+    - YYImage
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - AlipaySDK-iOS
+  - BMKLocationKit
+  - BRPickerView (= 2.1.0)
+  - Charts
+  - CocoaLumberjack (~> 3.5.1)
+  - DBCorner
+  - DZNEmptyDataSet
+  - FSCalendar
+  - FTPopOverMenu
+  - HHRouter (= 0.1.9)
+  - iCarousel (= 1.8.3)
+  - IQKeyboardManager
   - JKCategories (= 1.8.1)
+  - JPush
+  - LEEAlert (= 1.2.1)
   - Masonry
+  - MBProgressHUD (= 1.1.0)
+  - MJRefresh
+  - NullSafe (~> 1.2.3)
+  - pop
+  - ReactiveObjC
+  - SAMKeychain
+  - SDCycleScrollView
+  - SDWebImage
+  - SGQRCode (~> 3.0.1)
+  - TTGTagCollectionView
+  - TTTAttributedLabel
+  - TZImagePickerController
+  - UMCCommon
+  - UMCShare/Social/ReducedQQ
+  - UMCShare/Social/ReducedSina
+  - UMCShare/Social/ReducedWeChat
   - WebViewJavascriptBridge (~> 6.0)
+  - WechatOpenSDK (= 1.8.4)
   - WMPageController (= 2.3.0)
+  - YBImageBrowser
+  - YYModel
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - AlipaySDK-iOS
+    - BMKLocationKit
+    - BRPickerView
+    - Charts
+    - CocoaLumberjack
+    - DBCorner
+    - DZNEmptyDataSet
+    - FSCalendar
+    - FTPopOverMenu
+    - HHRouter
+    - iCarousel
+    - IQKeyboardManager
+    - JCore
     - JKCategories
+    - JPush
+    - LEEAlert
     - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - NullSafe
+    - pop
+    - ReactiveObjC
+    - SAMKeychain
+    - SDCycleScrollView
+    - SDWebImage
+    - SGQRCode
+    - TTGTagCollectionView
+    - TTTAttributedLabel
+    - TZImagePickerController
+    - UMCCommon
+    - UMCShare
     - WebViewJavascriptBridge
+    - WechatOpenSDK
     - WMPageController
+    - YBImageBrowser
+    - YYImage
+    - YYModel
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AlipaySDK-iOS: 703a55774a37f412410ab04af96c011b91ec58cb
+  BMKLocationKit: fd3d6b4a9a3a1a2763819f56b780bda5fc5b8726
+  BRPickerView: bcf71c838a27490a34a61c0ed5074ef5651b1717
+  Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
+  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
+  DBCorner: e09d0dc1a7f8c0ac29fa221ed5cfe79c51b3c866
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
+  FTPopOverMenu: 82782ddb42712fcd7747d072afd8f5e8cb2303eb
+  HHRouter: c096524e95a07a1970e6e23a19ee5a9592dc326d
+  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  JCore: 2e6690b41b1b59c4a768e0a3187c311911c02ca8
   JKCategories: d5fecfa4f790685ea20daea319f74a8701d4c3ab
+  JPush: 65cd9d8cb050b6d8c95736517d846fac2f53c134
+  LEEAlert: 325078be70d9234e318d69703ba2f2cd01d8974a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
+  MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
+  NullSafe: c5dde0d07fe0136a8194d6af9e285b0322b6c068
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
+  SDWebImage: 7edb9c3ea661e77a66661f7f044de8c1b55d1120
+  SGQRCode: bf02d60e18d6660a9d75ff1c8b9b467f064f054e
+  TTGTagCollectionView: 86fcbfa6a7493c9e860b01c2e693cffc8acf6de1
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
+  TZImagePickerController: 99f03b64145a8c92c55b9b1b931410967d9be4cb
+  UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
+  UMCShare: e0cef55c0fd6051254c8cda1d0630eb578b27bad
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
+  WechatOpenSDK: 9b721089507c895d05f997408c30bb6e6f5f9b60
   WMPageController: 9f219bb8912a1a1f51af11fde61e2682a7b7e7f2
+  YBImageBrowser: 7ecc8bf33ffa5f3b94c397c29b4f3638dd37f527
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 2adb3fcfb9f2b6c620bca8ad31ac2b0e454ddfa9
+PODFILE CHECKSUM: 0b4cc2da86942ca30218237a72c2bd42261b4be5
 
 COCOAPODS: 1.8.4
