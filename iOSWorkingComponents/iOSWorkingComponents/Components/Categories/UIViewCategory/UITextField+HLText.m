@@ -9,7 +9,6 @@
 #import "UITextField+HLText.h"
 #import "CustomConst.h"
 #import <objc/runtime.h>
-#import "CustomConst.h"
 #import <JKCategories/JKCategories.h>
 
 @implementation UITextField (HLText)

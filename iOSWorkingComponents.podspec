@@ -103,7 +103,17 @@ Pod::Spec.new do |spec|
     ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/BaseUI/*.{h,m}'
     end
 
+#Categories目录
+    spec.subspec 'Categories' do |ss|
+    ss.dependency 'iOSWorkingComponents/AppConfig'
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/Categories/**.{h,m}'
+    end
 
+#CalendarView目录
+    spec.subspec 'CalendarView' do |ss|
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/CalendarView/*.{h,m}'
+    end
 
   #spec.exclude_files = "Classes/Exclude"
 
@@ -118,7 +128,12 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
-  # spec.resources = "Resources/*.png"
+  # spec.resources = ['iOSWorkingComponents/iOSWorkingComponents/Components/CalendarView/CalendarView.xib', 'Sounds/*']
+
+    spec.resources    = {
+    'xib' => ['iOSWorkingComponents/iOSWorkingComponents/Components/CalendarView/CalendarView.xib'],
+    'images' => ['iOSWorkingComponents/iOSWorkingComponents/Components/Categories/NumberCalculate/resource/*png']
+  }
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
