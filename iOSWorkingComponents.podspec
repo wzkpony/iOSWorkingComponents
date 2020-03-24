@@ -121,6 +121,12 @@ Pod::Spec.new do |spec|
     #ss.dependency 'iOSWorkingComponents/Categories'
     #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/CalendarView/*.{h,m}'
     #end
+#RSA目录
+    #spec.subspec 'RSA' do |ss|
+    #ss.dependency 'iOSWorkingComponents/Categories'
+    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/RSA/*.{h,m}'
+    #end
+
 
   #spec.exclude_files = "Classes/Exclude"
 
@@ -152,6 +158,8 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
+    spec.static_framework = true
+
   # spec.framework  = "SomeFramework"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
 
@@ -174,8 +182,16 @@ Pod::Spec.new do |spec|
    spec.ios.dependency 'WebViewJavascriptBridge', '~> 6.0' 
    spec.ios.dependency 'Masonry' 
    spec.ios.dependency 'JKCategories',' 1.8.1' 
-   spec.ios.dependency 'FSCalendar' 
+   spec.ios.dependency 'FSCalendar'
+   spec.ios.dependency 'SAMKeychain' 
+   spec.ios.dependency 'SDWebImage' 
+
    spec.ios.dependency 'MBProgressHUD','1.1.0'
+   spec.ios.dependency 'UMCCommon' 
+   spec.ios.dependency 'UMCShare/Social/ReducedWeChat' 
+   spec.ios.dependency 'UMCShare/Social/ReducedQQ'
+   spec.ios.dependency 'UMCShare/Social/ReducedSina'
+
 
 
 

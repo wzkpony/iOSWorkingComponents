@@ -7,7 +7,7 @@
 //
 
 #import "MBProgressHUD+LL.h"
-#import "UIImage+GIF.h"
+#import <SDWebImage/SDWebImage.h>
 
 #define HUD_BG_COLOR [[UIColor blackColor] colorWithAlphaComponent:0.8]
 
