@@ -592,6 +592,8 @@
 		1D59F5D224268EC80089776D /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				1D59F6FE24268ED80089776D /* NSData+Base64.h */,
+				1D59F70024268ED80089776D /* NSData+Base64.m */,
 				1D59F5D324268EC80089776D /* NumberCalculate */,
 				1D59F5DB24268EC80089776D /* LEEAlertCategory */,
 				1D59F5DE24268EC80089776D /* CollectionView */,
@@ -1132,9 +1134,7 @@
 			isa = PBXGroup;
 			children = (
 				1D59F6FD24268ED80089776D /* RSAEncryptor.h */,
-				1D59F6FE24268ED80089776D /* NSData+Base64.h */,
 				1D59F6FF24268ED80089776D /* RSAEncryptor.m */,
-				1D59F70024268ED80089776D /* NSData+Base64.m */,
 			);
 			path = RSA;
 			sourceTree = "<group>";
