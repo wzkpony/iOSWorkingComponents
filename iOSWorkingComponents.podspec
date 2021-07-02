@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "iOSWorkingComponents"
-  spec.version      = "0.1.1"
+  spec.version      = "0.1.2"
   spec.summary      = "iOSWorkingComponentsiOS开发组件"
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/wzkpony/iOSWorkingComponents.git", :tag => "0.1.1" }
+  spec.source       = { :git => "https://github.com/wzkpony/iOSWorkingComponents.git", :tag => "0.1.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -359,11 +359,10 @@ Pod::Spec.new do |spec|
 
 
    spec.ios.dependency 'DZNEmptyDataSet'
-   spec.ios.dependency 'BMKLocationKit'
-   spec.ios.dependency 'BaiduMapKit'
    spec.ios.dependency 'CL_ShanYanSDK'
    spec.ios.dependency 'YKWoodpecker'
    spec.ios.dependency 'Qiniu','8.2.0'
 
-
+   spec.ios.dependency 'YYImage'
+   spec.ios.dependency 'AlipaySDK-iOS'
 end
