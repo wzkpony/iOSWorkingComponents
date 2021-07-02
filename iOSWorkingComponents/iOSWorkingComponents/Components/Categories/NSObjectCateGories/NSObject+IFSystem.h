@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
  return MFMailComposeViewController //邮箱的VC
  */
 + (MFMailComposeViewController *)launchMailAppDelegateRecipients:(NSArray<NSString *> *)recipients subject:(NSString *)subject messageBody:(NSString *)messageBody delegate:(id<MFMailComposeViewControllerDelegate>)obj;
+///获取当前的VC
+- (UIViewController *)getCurrentVC;
 @end
 
 NS_ASSUME_NONNULL_END

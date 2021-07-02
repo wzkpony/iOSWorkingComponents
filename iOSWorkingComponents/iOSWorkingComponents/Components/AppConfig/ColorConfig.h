@@ -29,7 +29,7 @@
 
 
 //主题颜色
-#define App_ThemeColor App_UICOLOR_HEX(@"#2F7CFE")
+//#define App_ThemeColor [UIColor jk_colorWithHexString:(@"#2F7CFE")]
 #define App_GrayColor  App_RGBA(102, 102, 102, 1)
 #define App_51Color  App_RGBA(51, 51, 51, 1)
 #define App_153Color  App_RGBA(153, 153, 153, 1)
@@ -37,6 +37,9 @@
 #define App_102Color  App_RGBA(102, 102, 102, 1)
 #define App_102Color  App_RGBA(102, 102, 102, 1)
 #define App_221Color  App_RGBA(221, 221, 221, 1)
+//#define App_999999  App_UICOLOR_HEX(@"#999999")
+//#define App_333333  App_UICOLOR_HEX(@"#333333")
+//#define App_666666  App_UICOLOR_HEX(@"#666666")
 
 //
 

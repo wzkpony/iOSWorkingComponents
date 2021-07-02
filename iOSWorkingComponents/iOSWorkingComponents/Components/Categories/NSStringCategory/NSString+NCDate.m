@@ -7,7 +7,7 @@
 //
 
 #import "NSString+NCDate.h"
-
+#import <JKCategories.h>
 @implementation NSString (NCDate)
 +(NSTimeInterval)timeIntervalFromTimeStr:(NSString *)timeStr withFormater:(NSString *)formater{
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
@@ -294,13 +294,13 @@
         
         NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(0, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(0, 2)];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(3, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(3, 2)];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(6, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(6, 2)];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(9, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(9, 2)];
 
         return priceAttributed;
 
@@ -308,11 +308,11 @@
     else if ([string containsString:@"时"]){
         NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(0, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(0, 2)];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(3, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(3, 2)];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(6, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(6, 2)];
         
         return priceAttributed;
         
@@ -320,16 +320,16 @@
     else if ([string containsString:@"分"]){
         NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(0, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(0, 2)];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(3, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(3, 2)];
                 
         return priceAttributed;
     }
     else {
         NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(0, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(0, 2)];
                         
         return priceAttributed;
     }

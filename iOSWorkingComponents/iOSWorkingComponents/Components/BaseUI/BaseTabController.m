@@ -77,7 +77,7 @@
     // set the text color for selected state
     // 选中状态下的文字属性
     NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
-    selectedAttrs[NSForegroundColorAttributeName] = App_ThemeColor;
+    selectedAttrs[NSForegroundColorAttributeName] = [UIColor jk_colorWithHexString:(@"#2F7CFE")];
     // set the text Attributes
     // 设置文字属性
     UITabBarItem *tabBar = [UITabBarItem appearance];

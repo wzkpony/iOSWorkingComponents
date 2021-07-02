@@ -9,6 +9,9 @@
 #import "NSString+Category.h"
 #import <SAMKeychain/SAMKeychain.h>
 #import "CustomConst.h"
+#import "ColorConfig.h"
+#import <JKCategories.h>
+#import "FontConfig.h"
 
 static CGFloat const kTextLineSpace = 0;
 
@@ -491,7 +494,7 @@ static CGFloat const kTextLineSpace = 0;
     
     NSRange range = NSMakeRange(0, string.length);
     [priceAttributed addAttribute:NSStrikethroughStyleAttributeName value:@(1) range:range];
-    [priceAttributed addAttribute:NSStrikethroughColorAttributeName value:App_999999 range:range];
+    [priceAttributed addAttribute:NSStrikethroughColorAttributeName value:[UIColor jk_colorWithHexString:(@"#999999")] range:range];
 //    [priceAttributed addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:10] range:range];
     return priceAttributed;
 }
@@ -633,7 +636,7 @@ static CGFloat const kTextLineSpace = 0;
     
     [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [string length])];
     
-    [attributedString addAttribute:NSForegroundColorAttributeName value:App_333333 range:NSMakeRange(0, string.length)];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#333333")] range:NSMakeRange(0, string.length)];
 
     [attributedString addAttribute:NSFontAttributeName value:App_SystemFont(15) range:NSMakeRange(0, string.length)];
     
