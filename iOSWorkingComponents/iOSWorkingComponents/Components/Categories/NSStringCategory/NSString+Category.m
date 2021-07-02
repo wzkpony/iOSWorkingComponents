@@ -214,10 +214,10 @@ static CGFloat const kTextLineSpace = 0;
     return ceilf(size.height);
 }
 /**字符串高度*/
-+ (CGFloat)getTextSizeHeight:(NSString*)text UIFont:(UIFont *)font Width:(CGFloat)width {
++ (CGFloat)getTextSizeHeight:(NSString*)text UIFont:(UIFont *)font Width:(CGFloat)width lineBreakMode:(NSLineBreakMode)lineBreakMode {
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
     paragraph.alignment = NSTextAlignmentLeft;
-    paragraph.lineBreakMode = NSLineBreakByCharWrapping;
+    paragraph.lineBreakMode = lineBreakMode;
     //    paragraph.lineSpacing = kTextLineSpace;
     
     NSDictionary *attributeDic = @{NSFontAttributeName: font, NSParagraphStyleAttributeName: paragraph};
@@ -468,4 +468,178 @@ static CGFloat const kTextLineSpace = 0;
         return NO;
     }
 }
+
+/**手机号判断，11位和第一位是1*/
++ (BOOL)telNumber:(NSString *)str {
+    if (str.length != 11) {
+        return NO;
+    }
+    NSString *firstStr = [str substringToIndex:1];
+    if ([firstStr isEqualToString:@"1"] == YES) {
+        return YES;
+    }
+    return NO;
+    
+}
+
+///删除线
++ (NSMutableAttributedString *)attributedString:(NSString *)string {
+    if ([string isEqualToString:@"¥"] || App_IsEmpty(string) || [string containsString:@"null"] || [string isEqualToString:@"¥(null)"]) {
+        return [[NSMutableAttributedString alloc]initWithString:@""];
+    }
+    NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
+    
+    NSRange range = NSMakeRange(0, string.length);
+    [priceAttributed addAttribute:NSStrikethroughStyleAttributeName value:@(1) range:range];
+    [priceAttributed addAttribute:NSStrikethroughColorAttributeName value:App_999999 range:range];
+//    [priceAttributed addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:10] range:range];
+    return priceAttributed;
+}
+
+///自营
++ (NSMutableAttributedString *)attributedSelfYingString:(NSString *)string {
+    if (App_IsEmpty(string) || [string containsString:@"null"]|| [string isEqualToString:@"¥(null)"]) {
+        string =  @"";
+        NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
+        return priceAttributed;
+    }
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+
+    NSTextAttachment *attchment = [[NSTextAttachment alloc]init];
+
+    attchment.bounds = CGRectMake(0, -1, 28, 14);//设置frame
+
+    attchment.image = [UIImage imageNamed:@"ziying"];//设置图片
+
+        
+    NSAttributedString *content = [NSAttributedString attributedStringWithAttachment:(NSTextAttachment *)(attchment)];
+
+    [attributedString insertAttributedString:content atIndex:0];//插入到第几个下标
+
+//    [attributedString appendAttributedString:content]; //添加到尾部
+
+    return attributedString;
+}
+
+///自营
++ (NSMutableAttributedString *)attributedSelfYingString:(NSString *)string top:(CGFloat)top {
+    if (App_IsEmpty(string) || [string containsString:@"null"]|| [string isEqualToString:@"¥(null)"]) {
+        string =  @"";
+        NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
+        return priceAttributed;
+    }
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+
+    NSTextAttachment *attchment = [[NSTextAttachment alloc]init];
+
+    attchment.bounds = CGRectMake(0, top, 28, 14);//设置frame
+
+    attchment.image = [UIImage imageNamed:@"ziying"];//设置图片
+
+        
+    NSAttributedString *content = [NSAttributedString attributedStringWithAttachment:(NSTextAttachment *)(attchment)];
+
+    [attributedString insertAttributedString:content atIndex:0];//插入到第几个下标
+
+//    [attributedString appendAttributedString:content]; //添加到尾部
+
+    return attributedString;
+}
+
+
+///头部有点
++ (NSMutableAttributedString *)attributedSelfDotString:(NSString *)string top:(CGFloat)top {
+    if (App_IsEmpty(string) || [string containsString:@"null"]|| [string isEqualToString:@"¥(null)"]) {
+        string =  @"";
+        NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
+        return priceAttributed;
+    }
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+
+    NSTextAttachment *attchment = [[NSTextAttachment alloc]init];
+
+    attchment.bounds = CGRectMake(0, top, 20, 20);//设置frame
+
+    attchment.image = [UIImage imageNamed:@"dot"];//设置图片
+        
+    NSAttributedString *content = [NSAttributedString attributedStringWithAttachment:(NSTextAttachment *)(attchment)];
+
+    [attributedString insertAttributedString:content atIndex:0];//插入到第几个下标
+
+//    [attributedString appendAttributedString:content]; //添加到尾部
+
+    return attributedString;
+}
+
+
+
+///设置指定位置字体和颜色
++ (NSMutableAttributedString *)attributedFirstTextRedString:(NSString *)string withRange:(NSRange)range withTextColor:(UIColor *)textColor withFont:(UIFont *)font {
+    if (App_IsEmpty(string) || [string containsString:@"null"]
+        ||[string isEqualToString:@"¥"] || [string isEqualToString:@"¥(null)"]) {
+        string =  @"";
+        NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
+        return priceAttributed;
+    }
+    
+    if (string.length < 1) {
+        return nil;
+    }
+    NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
+    if (font != nil) {
+        [priceAttributed addAttribute:NSFontAttributeName value:font range:range];
+    }
+    if (textColor != nil) {
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:textColor range:range];
+    }
+
+    return priceAttributed;
+}
+
+
+
+///字体设置
++ (NSMutableAttributedString *)attributedTextString:(NSString *)string withFirseRange:(NSRange)firstRange withFirstTextColor:(UIColor *)firstTextColor withFirstFont:(UIFont *)firstFont withTwoRange:(NSRange)Tworange withTwoColor:(UIColor *)twoColor withTwoFont:(UIFont *)twoFont {
+
+    if (App_IsEmpty(string) || [string containsString:@"null"]
+        ||[string isEqualToString:@"¥"]|| [string isEqualToString:@"¥(null)"]) {
+        string =  @"";
+        NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
+        return priceAttributed;
+    }
+    
+    NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
+    
+    [priceAttributed addAttribute:NSForegroundColorAttributeName value:firstTextColor range:firstRange];
+    [priceAttributed addAttribute:NSFontAttributeName value:firstFont range:firstRange];
+    
+    [priceAttributed addAttribute:NSForegroundColorAttributeName value:twoColor range:Tworange];
+    [priceAttributed addAttribute:NSFontAttributeName value:twoFont range:Tworange];
+
+    return priceAttributed;
+}
+
+
+///段落设置
++ (NSMutableAttributedString *)attributeTextStringParagraph:(NSString *)string {
+    NSMutableAttributedString * attributedString = [[NSMutableAttributedString alloc]initWithString:string];
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
+    paragraphStyle.paragraphSpacingBefore = 0; // 段间距
+    paragraphStyle.firstLineHeadIndent = 0;  // 段落第一行缩进
+    paragraphStyle.lineSpacing = 10; // 行间距
+    paragraphStyle.headIndent = 0; // 头缩进
+    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [string length])];
+    
+    [attributedString addAttribute:NSForegroundColorAttributeName value:App_333333 range:NSMakeRange(0, string.length)];
+
+    [attributedString addAttribute:NSFontAttributeName value:App_SystemFont(15) range:NSMakeRange(0, string.length)];
+    
+    return attributedString;
+
+}
+
+
 @end

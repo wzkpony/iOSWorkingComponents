@@ -5,6 +5,12 @@
 //  Created by 王学文 on 2017/9/6.
 //  Copyright © 2017年 jxh. All rights reserved.
 //
+/**
+ 星星评价级别。
+ 🌟🌟🌟🌟🌟
+ 五星好评，一星差评
+ 
+ */
 
 #import <UIKit/UIKit.h>
 @class ZJYStarRateView;

@@ -2,8 +2,10 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-target 'iOSWorkingComponents' do
+target 'HSiOS' do
   pod 'WMPageController', '2.3.0' #pageViewController,测划翻页。
+  pod 'JXCategoryView' #JXCategoryView、,测划翻页。
+
   pod 'JKCategories',' 1.8.1'#扩展类
   pod 'WebViewJavascriptBridge', '~> 6.0' #H5对接js框架
   pod 'Masonry'#layout布局
@@ -12,8 +14,12 @@ target 'iOSWorkingComponents' do
   pod 'MJRefresh'#下拉刷新
   pod 'IQKeyboardManager'#键盘控制
   pod 'SDWebImage'#加载图片
-  #pod 'Wonderful'#色彩的库、跑马灯
+  pod 'Wonderful'#色彩的库、跑马灯
   pod 'SDCycleScrollView'#无限循环图片、文字轮播器、banner
+  pod 'TYCyclePagerView'#无限循环图片、文字轮播器、banner
+
+  pod 'iCarousel','1.8.3'#旋转木马
+
   pod 'NullSafe', '~> 1.2.3'  #null处理，防止闪退
   pod 'MBProgressHUD','1.1.0'#HUD
   pod 'SAMKeychain' #钥匙串
@@ -25,22 +31,21 @@ target 'iOSWorkingComponents' do
   pod 'YYModel' # 高性能的 iOS JSON 模型框架。
   pod 'TZImagePickerController'#相册
   
-  pod 'BRPickerView','2.1.0'
+  pod 'BRPickerView'#,'2.1.0'
   pod 'YBImageBrowser'#图片预览
   
   pod 'TTTAttributedLabel'#富文本
-  pod 'WechatOpenSDK','1.8.4'#微信支付
-  pod 'AlipaySDK-iOS'#支付宝支付
+  #pod 'WechatOpenSDK','1.8.4'#微信支付
+  #pod 'AlipaySDK-iOS'#支付宝支付
   pod 'TTGTagCollectionView'#
   #pod 'PYSearch'
   #pod 'AMapLocation'#高德定位SDK
-  pod 'iCarousel','1.8.3'#旋转木马
   pod 'CocoaLumberjack','~>3.5.1'#日志系统
-  pod 'FSCalendar'
-  
+  pod 'FSCalendar'#日历控件
+#  pod 'HGPersonalCenterExtend' #滚动试图混合嵌套
   
   #pod 'YYCache' # 高性能的 iOS 缓存框架。
-  #pod 'YYImage' # 功能强大的 iOS 图像框架。
+  pod 'YYImage', :git => 'https://github.com/QiuYeHong90/YYImage.git' # 功能强大的 iOS 图像框架。
   #pod 'YYWebImage' # 高性能的 iOS 异步图像加载框架。
   #pod 'YYText' # 功能强大的 iOS 富文本框架。
   #pod 'YYKeyboardManager' # iOS 键盘监听管理工具。
@@ -50,19 +55,24 @@ target 'iOSWorkingComponents' do
   
   
   # 友盟的依赖库，也是基库，下边关于友盟的所有框架都是需要这两个依赖库
-  pod 'UMCCommon'#友盟功能库
+  pod 'UMCommon'#友盟功能库
+  pod 'UMDevice'
+
   #pod 'UMCSecurityPlugins'#友盟安全库
   # 友盟的功能模块SDK---
   # 微信(精简版0.2M)，
-  pod 'UMCShare/Social/ReducedWeChat'
+#  pod 'UMCShare/Social/ReducedWeChat'
   # 集成QQ/QZone/TIM(精简版0.5M)
-  pod 'UMCShare/Social/ReducedQQ'
+  #pod 'UMCShare/Social/ReducedQQ'
   # 集成新浪微博(精简版1M)
-  pod 'UMCShare/Social/ReducedSina'
+  #pod 'UMCShare/Social/ReducedSina'
   ## 集成支付宝
   #pod 'UMCShare/Social/AlipayShare'
   ## 统计SDK
-  #pod 'UMCAnalytics'
+  pod 'UMAPM'
+  pod 'UMCCommonLog'
+  
+  pod 'WechatOpenSDK'
   
   
   pod 'DZNEmptyDataSet'#空白页面上显示提示信息
@@ -70,11 +80,11 @@ target 'iOSWorkingComponents' do
   #pod 'JPVideoPlayer'
   
   #pod 'Atlas'#聊天
-  pod 'pop'#动画
-  pod 'ReactiveObjC'#响应式编程
+  #pod 'pop'#动画
+  #pod 'ReactiveObjC'#响应式编程
   #pod 'NJKWebViewProgress'#web进度条
-  pod 'HHRouter', '0.1.9'#路由配置
-  pod 'Charts'    #图表
+  #pod 'HHRouter', '0.1.9'#路由配置
+  #pod 'Charts'    #图表
   
   #阿里iot
   #pod 'AlicloudALBBOpenAccount', '3.4.0.30-ilop'
@@ -97,6 +107,22 @@ target 'iOSWorkingComponents' do
   # pod 'GTSDK'#个推
   
   pod 'BMKLocationKit'#百度定位SDK
+  pod 'BaiduMapKit' # 默认集成全量包
   
-  pod 'SGQRCode', '~> 3.0.1'#二维码生成和扫描
+  #pod 'SGQRCode', '~> 3.0.1'#二维码生成和扫描
+  
+  #pod 'BabyBluetooth', '~> 0.7.0'#蓝牙模块
+  
+  #集成最新版闪验SDK:
+  pod 'CL_ShanYanSDK'
+  
+  pod  'YKWoodpecker'
+  
+  
+  #七牛云存储SDK
+  pod "Qiniu",'8.2.0'
+
+  
+#  pod "RACollectionViewReorderableTripletLayout"
+  
 end

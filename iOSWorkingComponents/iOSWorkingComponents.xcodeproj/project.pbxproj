@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D04D35B266A1C130062C1C1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D04D35A266A1C130062C1C1 /* AVFoundation.framework */; };
 		1D0D0DBC24272EB600CB3338 /* AppDelegate+PushService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D0DB824272EB600CB3338 /* AppDelegate+PushService.m */; };
 		1D0D0DBD24272EB600CB3338 /* AppDelegate+Pay.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D0DBB24272EB600CB3338 /* AppDelegate+Pay.m */; };
 		1D0D0DC22427658700CB3338 /* RequestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0D0DC12427658600CB3338 /* RequestUtil.m */; };
@@ -179,6 +180,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D04D35A266A1C130062C1C1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1D0D0DB824272EB600CB3338 /* AppDelegate+PushService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+PushService.m"; sourceTree = "<group>"; };
 		1D0D0DB924272EB600CB3338 /* AppDelegate+PushService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+PushService.h"; sourceTree = "<group>"; };
 		1D0D0DBA24272EB600CB3338 /* AppDelegate+Pay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Pay.h"; sourceTree = "<group>"; };
@@ -477,6 +479,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D04D35B266A1C130062C1C1 /* AVFoundation.framework in Frameworks */,
 				31F6F63C023117573CB35F09 /* Pods_iOSWorkingComponents.framework in Frameworks */,
 				1D59F73E24268ED80089776D /* libmp3lame.a in Frameworks */,
 			);
@@ -950,18 +953,18 @@
 		1D59F69724268ED70089776D /* CollectionImage */ = {
 			isa = PBXGroup;
 			children = (
-				1D59F69824268ED70089776D /* HLImagesCell.xib */,
 				1D59F69924268ED70089776D /* GPCollectionImageView.h */,
-				1D59F69A24268ED70089776D /* HLImagesCell.h */,
+				1D59F69F24268ED70089776D /* GPCollectionImageView.m */,
+				1D59F6A024268ED70089776D /* GPCollectionImageView.xib */,
 				1D59F69B24268ED70089776D /* btn_del@3x.png */,
 				1D59F69C24268ED70089776D /* btn_del@2x.png */,
 				1D59F69D24268ED70089776D /* btn_del.png */,
 				1D59F69E24268ED70089776D /* btn_addSend.png */,
-				1D59F69F24268ED70089776D /* GPCollectionImageView.m */,
-				1D59F6A024268ED70089776D /* GPCollectionImageView.xib */,
 				1D59F6A124268ED70089776D /* btn_addSend@2x.png */,
 				1D59F6A224268ED70089776D /* btn_addSend@3x.png */,
+				1D59F69A24268ED70089776D /* HLImagesCell.h */,
 				1D59F6A324268ED70089776D /* HLImagesCell.m */,
+				1D59F69824268ED70089776D /* HLImagesCell.xib */,
 			);
 			path = CollectionImage;
 			sourceTree = "<group>";
@@ -1249,6 +1252,7 @@
 		C582A9BEA3A8726EC5952781 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D04D35A266A1C130062C1C1 /* AVFoundation.framework */,
 				2E1C08004B2B28717E7600FB /* Pods_iOSWorkingComponents.framework */,
 			);
 			name = Frameworks;
@@ -1692,7 +1696,8 @@
 			baseConfigurationReference = 3CD3A840F87E5C1DD8B21C24 /* Pods-iOSWorkingComponents.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSWorkingComponents/PrefixHeader.pch";
@@ -1705,8 +1710,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/iOSWorkingComponents/Components/ChatVC/lame",
 				);
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = test.iOSWorkingComponents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1716,7 +1723,8 @@
 			baseConfigurationReference = 623FCD4D7ACC5D523189498A /* Pods-iOSWorkingComponents.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSWorkingComponents/PrefixHeader.pch";
@@ -1729,8 +1737,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/iOSWorkingComponents/Components/ChatVC/lame",
 				);
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = test.iOSWorkingComponents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

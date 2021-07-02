@@ -5,6 +5,10 @@
 //  Created by wzk on 2020/1/4.
 //  Copyright © 2020 wzk. All rights reserved.
 //
+/**
+ 签字模版。或者绘画View
+ 
+ */
 
 #import <UIKit/UIKit.h>
 

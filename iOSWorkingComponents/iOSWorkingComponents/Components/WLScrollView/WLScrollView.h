@@ -5,7 +5,11 @@
 //  Created by 张子豪 on 2017/11/16.
 //  Copyright © 2017年 张子豪. All rights reserved.
 //
-
+/**
+ 
+ 滚动的轮播图，旋转木马和banner。
+ 
+ */
 #import <UIKit/UIKit.h>
 #import "WLSubView.h"
 

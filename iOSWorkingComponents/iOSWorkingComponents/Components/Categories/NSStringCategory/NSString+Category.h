@@ -58,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**获取高度*/
 + (CGFloat)getAttributeSizeHeight:(NSAttributedString *)attr Width:(CGFloat)width;
 /**字符串高度*/
-+ (CGFloat)getTextSizeHeight:(NSString*)text UIFont:(UIFont *)font Width:(CGFloat)width;
++ (CGFloat)getTextSizeHeight:(NSString*)text UIFont:(UIFont *)font Width:(CGFloat)width lineBreakMode:(NSLineBreakMode)lineBreakMode;
 /**获取字符串高度*/
 + (CGFloat)getTextSizeWidth:(NSString *)text UIFont:(NSInteger)font  Height:(CGFloat)height;
 
@@ -79,6 +79,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**固定电话，包括400电话*/
 + (BOOL)telHas:(NSString *)str;
 
+/**手机号判断，11位和第一位是1*/
++ (BOOL)telNumber:(NSString *)str;
 /**
  整数 
  @param str 字符串
@@ -87,6 +89,25 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)checkInteger:(NSString *)str;
 
 + (BOOL)checkNumber:(NSString *)str;
+
+///删除线富文本
++ (NSMutableAttributedString *)attributedString:(NSString *)string;
+
++ (NSMutableAttributedString *)attributedSelfYingString:(NSString *)string;
+
++ (NSMutableAttributedString *)attributedSelfYingString:(NSString *)string top:(CGFloat)top;
+
++ (NSMutableAttributedString *)attributedFirstTextRedString:(NSString *)string withRange:(NSRange)range withTextColor:(UIColor *)textColor withFont:(UIFont *)font;
+
+///字体设置
++ (NSMutableAttributedString *)attributedTextString:(NSString *)string withFirseRange:(NSRange)firstRange withFirstTextColor:(UIColor *)firstTextColor withFirstFont:(UIFont *)firstFont withTwoRange:(NSRange)Tworange withTwoColor:(UIColor *)twoColor withTwoFont:(UIFont *)twoFont;
+
+
++ (NSMutableAttributedString *)attributedSelfDotString:(NSString *)string top:(CGFloat)top;
+
+///段落设置
++ (NSMutableAttributedString *)attributeTextStringParagraph:(NSString *)string;
+
 @end
 
 NS_ASSUME_NONNULL_END
