@@ -7,21 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <BMKLocationkit/BMKLocationComponent.h>
+//#import <BMKLocationkit/BMKLocationComponent.h>
 #import "CustomConst.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-@interface GPLocationBaidu : NSObject<BMKLocationManagerDelegate>{
+/**
+ @interface GPLocationBaidu : NSObject<BMKLocationManagerDelegate>{
+ }
+ */
+@interface GPLocationBaidu : NSObject{
 }
 SINGLETON_FOR_HEADER(GPLocationBaidu);
-@property (nonatomic,strong) BMKLocationManager *locationManager;
-
-@property (nonatomic, strong) BMKLocation * location;
+//@property (nonatomic,strong) BMKLocationManager *locationManager;
+//
+//@property (nonatomic, strong) BMKLocation * location;
 //@property (nonatomic, strong) BMKLocationNetworkState  state;
 
 
-- (void)startdLocation:(BMKLocatingCompletionBlock)completionBlock;//开始单次定位
+//- (void)startdLocation:(BMKLocatingCompletionBlock)completionBlock;//开始单次定位
 @end
 
 NS_ASSUME_NONNULL_END

@@ -10,7 +10,7 @@
 #import <WXApi.h>
 #import "AppKeyConst.h"
 #import <UMCommon/UMCommon.h>
-#import <UMShare/UMShare.h>
+//#import <UMShare/UMShare.h>
 #import <AlipaySDK/AlipaySDK.h>
 #import "WXApiManager.h"
 
@@ -27,10 +27,10 @@
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
 {
     //6.3的新的API调用，是为了兼容国外平台(例如:新版facebookSDK,VK等)的调用[如果用6.2的api调用会没有回调],对国内平台没有影响
-    BOOL result = [[UMSocialManager defaultManager]  handleOpenURL:url options:options];
-    if (!result) {
-        // 其他如支付等SDK的回调
-    }
+//    BOOL result = [[UMSocialManager defaultManager]  handleOpenURL:url options:options];
+//    if (!result) {
+//        // 其他如支付等SDK的回调
+//    }
     
     return [self openUrlPay:url];
 }

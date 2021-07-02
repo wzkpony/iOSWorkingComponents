@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-iOSWorkingComponents/Pods-iOSWorkingComponents-resources.sh
 ${PODS_ROOT}/AlipaySDK-iOS/AlipaySDK.bundle
+${PODS_ROOT}/CL_ShanYanSDK/framework/sdk_oauth.bundle
+${PODS_ROOT}/UMCCommonLog/UMCommonLog/UMCommonLog.bundle

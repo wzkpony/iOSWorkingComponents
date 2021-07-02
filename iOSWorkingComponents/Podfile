@@ -1,8 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
-target 'HSiOS' do
+target 'iOSWorkingComponents' do
   pod 'WMPageController', '2.3.0' #pageViewController,测划翻页。
   pod 'JXCategoryView' #JXCategoryView、,测划翻页。
 
@@ -36,7 +36,7 @@ target 'HSiOS' do
   
   pod 'TTTAttributedLabel'#富文本
   #pod 'WechatOpenSDK','1.8.4'#微信支付
-  #pod 'AlipaySDK-iOS'#支付宝支付
+  pod 'AlipaySDK-iOS'#支付宝支付
   pod 'TTGTagCollectionView'#
   #pod 'PYSearch'
   #pod 'AMapLocation'#高德定位SDK
@@ -45,7 +45,7 @@ target 'HSiOS' do
 #  pod 'HGPersonalCenterExtend' #滚动试图混合嵌套
   
   #pod 'YYCache' # 高性能的 iOS 缓存框架。
-  pod 'YYImage', :git => 'https://github.com/QiuYeHong90/YYImage.git' # 功能强大的 iOS 图像框架。
+  pod 'YYImage'#, :git => 'https://github.com/QiuYeHong90/YYImage.git' # 功能强大的 iOS 图像框架。
   #pod 'YYWebImage' # 高性能的 iOS 异步图像加载框架。
   #pod 'YYText' # 功能强大的 iOS 富文本框架。
   #pod 'YYKeyboardManager' # iOS 键盘监听管理工具。
@@ -106,8 +106,8 @@ target 'HSiOS' do
   
   # pod 'GTSDK'#个推
   
-  pod 'BMKLocationKit'#百度定位SDK
-  pod 'BaiduMapKit' # 默认集成全量包
+  #pod 'BMKLocationKit'#百度定位SDK
+  #pod 'BaiduMapKit' # 默认集成全量包
   
   #pod 'SGQRCode', '~> 3.0.1'#二维码生成和扫描
   
