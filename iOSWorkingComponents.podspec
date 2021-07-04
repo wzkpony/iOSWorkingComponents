@@ -64,11 +64,11 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-   spec.platform     = :ios
-   spec.platform     = :ios, "9.0"
+   #spec.platform     = :ios
+   #spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms
-   spec.ios.deployment_target = "8.0"
+    spec.ios.deployment_target = "9.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
@@ -100,154 +100,253 @@ Pod::Spec.new do |spec|
 
 #BaseUI目录
     spec.subspec 'BaseUI' do |ss|
-    #ss.dependency 'iOSWorkingComponents/AppConfig'
+    ss.dependency 'iOSWorkingComponents/AppConfig'
     ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/BaseUI/*.{h,m}'
     end
 
 #HUD目录
     spec.subspec 'HUD' do |ss|
-    #ss.dependency 'iOSWorkingComponents/AppConfig'
+    ss.dependency 'iOSWorkingComponents/AppConfig'
     ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/HUD/MBProgressHUD+LL/*.{h,m}'
     end
 
 #Categories目录
     spec.subspec 'Categories' do |ss|
-    #ss.dependency 'iOSWorkingComponents/AppConfig'
-    #ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig'
+    ss.dependency 'iOSWorkingComponents/HUD'
     ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/Categories/**/*.{h,m}'
     end
 
 #CalendarView目录
-    #spec.subspec 'CalendarView' do |ss|
-    #ss.dependency 'iOSWorkingComponents/Categories'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/CalendarView/*.{h,m}'
-    #end
+    spec.subspec 'CalendarView' do |ss|
+
+    ss.dependency 'iOSWorkingComponents/AppConfig'
+    ss.dependency 'iOSWorkingComponents/Categories'
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/CalendarView/*.{h,m}'
+    end
 #RSA目录
-    #spec.subspec 'RSA' do |ss|
-    #ss.dependency 'iOSWorkingComponents/Categories'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/RSA/*.{h,m}'
-    #end
+    spec.subspec 'RSA' do |ss|
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/RSA/*.{h,m}'
+    end
 #AppRequest目录
-    #spec.subspec 'AppRequest' do |ss|
-    #ss.dependency 'iOSWorkingComponents/AppRequest'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/AppRequest/*.{h,m}'
-    #end
+    spec.subspec 'AppRequest' do |ss|
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig'
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/AppRequest/*.{h,m}'
+    end
 #AppDelegateCategories目录
-    #spec.subspec 'AppDelegateCategories' do |ss|
-    #ss.dependency 'iOSWorkingComponents/AppDelegateCategories'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/AppDelegateCategories/*.{h,m}'
-    #end
+    spec.subspec 'AppDelegateCategories' do |ss|
+
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig'   
+    ss.dependency 'iOSWorkingComponents/WXPay'   
+
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/AppDelegateCategories/*.{h,m}'
+    end
+
+
 #CellUI目录
-    #spec.subspec 'CellUI' do |ss|
-    #ss.dependency 'iOSWorkingComponents/CellUI/Cells'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/CellUI/Cells/*.{h,m}'
-    #end
+    spec.subspec 'CellUI' do |ss|
+
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig' 
+    ss.dependency 'iOSWorkingComponents/BaseUI' 
+    ss.dependency 'iOSWorkingComponents/SelectViews'
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/CellUI/Cells/*.{h,m}'
+    end
+
+
 #ChinaCityList目录
-    #spec.subspec 'ChinaCityList' do |ss|
-    #ss.dependency 'iOSWorkingComponents/ChinaCityList'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/ChinaCityList/*.{h,m}','iOSWorkingComponents/iOSWorkingComponents/Components/ChinaCityList/ZYPinYinSearchLib/*.{h,m}'
-    #end
+    spec.subspec 'ChinaCityList' do |ss|
+
+    ss.dependency 'iOSWorkingComponents/AppConfig'
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/ChinaCityList/*.{h,m}','iOSWorkingComponents/iOSWorkingComponents/Components/ChinaCityList/ZYPinYinSearchLib/*.{h,m}'
+    end
 
 #CodeTextView目录
-    #spec.subspec 'CodeTextView' do |ss|
-    #ss.dependency 'iOSWorkingComponents/CodeTextView'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/CodeTextView/*.{h,m}'
-    #end
+    spec.subspec 'CodeTextView' do |ss|
+
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig' 
+    ss.dependency 'iOSWorkingComponents/BaseUI' 
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/CodeTextView/*.{h,m}'
+    end
 #CollectionImage目录
-    #spec.subspec 'CollectionImage' do |ss|
-    #ss.dependency 'iOSWorkingComponents/CollectionImage'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/CollectionImage/*.{h,m}'
-    #end
+    spec.subspec 'CollectionImage' do |ss|
+
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig' 
+    ss.dependency 'iOSWorkingComponents/BaseUI'
+    
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/CollectionImage/*.{h,m}'
+    end
 #FileAPP目录
-    #spec.subspec 'FileAPP' do |ss|
-    #ss.dependency 'iOSWorkingComponents/FileAPP'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/FileAPP/*.{h,m}'
-    #end
+    spec.subspec 'FileAPP' do |ss|
+    
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig' 
+    ss.dependency 'iOSWorkingComponents/BaseUI'
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/FileAPP/*.{h,m}'
+    end
 #FQPhotoAlbum目录
-    #spec.subspec 'FQPhotoAlbum' do |ss|
-    #ss.dependency 'iOSWorkingComponents/FQPhotoAlbum'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/FQPhotoAlbum/*.{h,m}'
-    #end
+    spec.subspec 'FQPhotoAlbum' do |ss|
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/FQPhotoAlbum/*.{h,m}'
+    end
 #FTPopOverMenu目录
-    #spec.subspec 'FTPopOverMenu' do |ss|
-    #ss.dependency 'iOSWorkingComponents/FTPopOverMenu'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/FTPopOverMenu/*.{h,m}'
-    #end
+    spec.subspec 'FTPopOverMenu' do |ss|
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/FTPopOverMenu/*.{h,m}'
+    end
 
 #GPCollectionMenuView目录
-    #spec.subspec 'GPCollectionMenuView' do |ss|
-    #ss.dependency 'iOSWorkingComponents/GPCollectionMenuView'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/GPCollectionMenuView/*.{h,m}'
-    #end
+    spec.subspec 'GPCollectionMenuView' do |ss|
+	
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig' 
+    ss.dependency 'iOSWorkingComponents/BaseUI'
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/GPCollectionMenuView/*.{h,m}'
+    end
 
 
 #IMSScanner目录
-    #spec.subspec 'IMSScanner' do |ss|
-    #ss.dependency 'iOSWorkingComponents/IMSScanner'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/IMSScanner/*.{h,m}','iOSWorkingComponents/iOSWorkingComponents/Components/IMSScanner/IMSQRCode/*.{h,m}'
-    #end
-#JDAddress目录
-    #spec.subspec 'JDAddress' do |ss|
-    #ss.dependency 'iOSWorkingComponents/JDAddress'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/JDAddress/*.{h,m}','iOSWorkingComponents/iOSWorkingComponents/Components/JDAddress/Controller/*.{h,m}','iOSWorkingComponents/iOSWorkingComponents/Components/JDAddress/Model/*.{h,m}','iOSWorkingComponents/iOSWorkingComponents/Components/JDAddress/View/*.{h,m}'
+    spec.subspec 'IMSScanner' do |ss|
+    
 
-    #end
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/IMSScanner/*.{h,m}','iOSWorkingComponents/iOSWorkingComponents/Components/IMSScanner/IMSQRCode/*.{h,m}'
+    end
+#JDAddress目录
+    spec.subspec 'JDAddress' do |ss|
+    
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig' 
+    ss.dependency 'iOSWorkingComponents/BaseUI'
+
+
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/JDAddress/*.{h,m}','iOSWorkingComponents/iOSWorkingComponents/Components/JDAddress/Controller/*.{h,m}','iOSWorkingComponents/iOSWorkingComponents/Components/JDAddress/Model/*.{h,m}','iOSWorkingComponents/iOSWorkingComponents/Components/JDAddress/View/*.{h,m}'
+
+    end
+
+
 #Location目录
-    #spec.subspec 'Location' do |ss|
-    #ss.dependency 'iOSWorkingComponents/Location'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/Location/gaode/*.{h,m}','iOSWorkingComponents/iOSWorkingComponents/Components/Location/baidu/*.{h,m}'
-    #end
-#Logs目录
-    #spec.subspec 'Logs' do |ss|
-    #ss.dependency 'iOSWorkingComponents/Logs'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/Logs/*.{h,m}'
-    #end
+    spec.subspec 'Location' do |ss|
+    
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig' 
+    ss.dependency 'iOSWorkingComponents/BaseUI'
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/Location/gaode/*.{h,m}','iOSWorkingComponents/iOSWorkingComponents/Components/Location/baidu/*.{h,m}'
+    end
+
+
 #RRSwipeCell目录
-    #spec.subspec 'RRSwipeCell' do |ss|
-    #ss.dependency 'iOSWorkingComponents/RRSwipeCell'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/RRSwipeCell/*.{h,m}'
-    #end
+    spec.subspec 'RRSwipeCell' do |ss|
+    
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig' 
+    ss.dependency 'iOSWorkingComponents/BaseUI'
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/RRSwipeCell/*.{h,m}'
+    end
 
 #SearchView目录
-    #spec.subspec 'SearchView' do |ss|
-    #ss.dependency 'iOSWorkingComponents/SearchView'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/SearchView/*.{h,m}'
-    #end
+    spec.subspec 'SearchView' do |ss|
+    
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig' 
+    ss.dependency 'iOSWorkingComponents/BaseUI'
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/SearchView/*.{h,m}'
+    end
+
 #SelectViews目录
-    #spec.subspec 'SelectViews' do |ss|
-    #ss.dependency 'iOSWorkingComponents/SelectViews'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/SelectViews/*.{h,m}'
-    #end
+    spec.subspec 'SelectViews' do |ss|
+     
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig' 
+    ss.dependency 'iOSWorkingComponents/BaseUI'
+    
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/SelectViews/*.{h,m}'
+    end
+
 #ShareView目录
-    #spec.subspec 'ShareView' do |ss|
-    #ss.dependency 'iOSWorkingComponents/ShareView'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/ShareView/*.{h,m}'
-    #end
+    spec.subspec 'ShareView' do |ss|
+     
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig' 
+    ss.dependency 'iOSWorkingComponents/BaseUI'
+    
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/ShareView/*.{h,m}'
+    end
+
 #WLScrollView目录
-    #spec.subspec 'WLScrollView' do |ss|
-    #ss.dependency 'iOSWorkingComponents/WLScrollView'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/WLScrollView/*.{h,m}'
-    #end
+    spec.subspec 'WLScrollView' do |ss|
+    
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig' 
+    ss.dependency 'iOSWorkingComponents/BaseUI'
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/WLScrollView/*.{h,m}'
+    end
+
+
 #WXPay目录
-    #spec.subspec 'WXPay' do |ss|
-    #ss.dependency 'iOSWorkingComponents/WXPay'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/WXPay/*.{h,m}'
-    #end
+    spec.subspec 'WXPay' do |ss|
+    
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig' 
+    ss.dependency 'iOSWorkingComponents/BaseUI'
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/WXPay/*.{h,m}'
+    end
+
 #XASignatureView目录
-    #spec.subspec 'XASignatureView' do |ss|
-    #ss.dependency 'iOSWorkingComponents/XASignatureView'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/XASignatureView/*.{h,m}'
-    #end
+    spec.subspec 'XASignatureView' do |ss|
+    
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig' 
+    ss.dependency 'iOSWorkingComponents/BaseUI'
+
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/XASignatureView/*.{h,m}'
+    end
+
+
 #ZJYStarRateView目录
-    #spec.subspec 'ZJYStarRateView' do |ss|
-    #ss.dependency 'iOSWorkingComponents/ZJYStarRateView'
-    #ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/ZJYStarRateView/*.{h,m}'
-    #end
+    spec.subspec 'ZJYStarRateView' do |ss|
+    
+    ss.dependency 'iOSWorkingComponents/Categories'
+    ss.dependency 'iOSWorkingComponents/HUD'
+    ss.dependency 'iOSWorkingComponents/AppConfig' 
+    ss.dependency 'iOSWorkingComponents/BaseUI'
 
-
-
-
-
+    ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/ZJYStarRateView/*.{h,m}'
+    end
 
 
   #spec.exclude_files = "Classes/Exclude"
@@ -278,7 +377,6 @@ Pod::Spec.new do |spec|
 'iOSWorkingComponents/iOSWorkingComponents/Components/CollectionImage/*.png',
 'iOSWorkingComponents/iOSWorkingComponents/Components/GPCollectionMenuView/*.xib',
 'iOSWorkingComponents/iOSWorkingComponents/Components/IMSScanner/*.png',
-'iOSWorkingComponents/iOSWorkingComponents/Components/Logs/*.xib',
 'iOSWorkingComponents/iOSWorkingComponents/Components/SearchView/*.xib',
 'iOSWorkingComponents/iOSWorkingComponents/Components/SelectViews/*.xib',
 'iOSWorkingComponents/iOSWorkingComponents/Components/ShareView/*.xib',
