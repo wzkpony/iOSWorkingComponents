@@ -1710,7 +1710,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/iOSWorkingComponents/Components/ChatVC/lame",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = test.iOSWorkingComponents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1737,7 +1737,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/iOSWorkingComponents/Components/ChatVC/lame",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = test.iOSWorkingComponents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
