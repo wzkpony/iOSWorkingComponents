@@ -6,7 +6,7 @@ target 'iOSWorkingComponents' do
   pod 'WMPageController', '2.3.0' #pageViewController,测划翻页。
   pod 'JXCategoryView' #JXCategoryView、,测划翻页。
 
-  pod 'JKCategories',' 1.8.1'#扩展类
+  pod 'JKCategories'#扩展类
   pod 'WebViewJavascriptBridge', '~> 6.0' #H5对接js框架
   pod 'Masonry'#layout布局
 
@@ -23,7 +23,7 @@ target 'iOSWorkingComponents' do
   pod 'NullSafe', '~> 1.2.3'  #null处理，防止闪退
   pod 'MBProgressHUD','1.1.0'#HUD
   pod 'SAMKeychain' #钥匙串
-  pod 'FTPopOverMenu'#popView弹框
+  #pod 'FTPopOverMenu'#popView弹框
   pod 'DBCorner'#圆角设置
   pod 'JPush'#极光推送
   pod 'LEEAlert', '1.2.1' #Alert弹框
@@ -35,7 +35,7 @@ target 'iOSWorkingComponents' do
   pod 'YBImageBrowser'#图片预览
   
   pod 'TTTAttributedLabel'#富文本
-  #pod 'WechatOpenSDK','1.8.4'#微信支付
+
   pod 'AlipaySDK-iOS'#支付宝支付
   pod 'TTGTagCollectionView'#
   #pod 'PYSearch'

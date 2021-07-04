@@ -346,7 +346,7 @@ Pod::Spec.new do |spec|
    spec.ios.dependency 'TTTAttributedLabel'
 
    spec.ios.dependency 'TTGTagCollectionView'
-   spec.ios.dependency 'CocoaLumberjack'
+   spec.ios.dependency 'CocoaLumberjack','~>3.5.1'
    
    spec.ios.dependency 'WechatOpenSDK'
 
