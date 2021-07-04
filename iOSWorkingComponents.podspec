@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "iOSWorkingComponents"
-  spec.version      = "0.1.3"
+  spec.version      = "0.1.5"
   spec.summary      = "iOSWorkingComponentsiOS开发组件"
 
   # This description is used to generate tags and improve search results.
@@ -64,8 +64,8 @@ Pod::Spec.new do |spec|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # spec.platform     = :ios
-  # spec.platform     = :ios, "8.0"
+   spec.platform     = :ios
+   spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms
    spec.ios.deployment_target = "8.0"
@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/wzkpony/iOSWorkingComponents.git", :tag => "0.1.3" }
+  spec.source       = { :git => "https://github.com/wzkpony/iOSWorkingComponents.git", :tag => "0.1.5" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -100,20 +100,20 @@ Pod::Spec.new do |spec|
 
 #BaseUI目录
     spec.subspec 'BaseUI' do |ss|
-    ss.dependency 'iOSWorkingComponents/AppConfig'
+    #ss.dependency 'iOSWorkingComponents/AppConfig'
     ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/BaseUI/*.{h,m}'
     end
 
 #HUD目录
     spec.subspec 'HUD' do |ss|
-    ss.dependency 'iOSWorkingComponents/AppConfig'
+    #ss.dependency 'iOSWorkingComponents/AppConfig'
     ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/HUD/MBProgressHUD+LL/*.{h,m}'
     end
 
 #Categories目录
     spec.subspec 'Categories' do |ss|
-    ss.dependency 'iOSWorkingComponents/AppConfig'
-    ss.dependency 'iOSWorkingComponents/HUD'
+    #ss.dependency 'iOSWorkingComponents/AppConfig'
+    #ss.dependency 'iOSWorkingComponents/HUD'
     ss.source_files = 'iOSWorkingComponents/iOSWorkingComponents/Components/Categories/**/*.{h,m}'
     end
 
