@@ -1476,26 +1476,6 @@ SOFTWARE.
 
 
 
-## UMAPM
-
-Copyright 2011 - 2020 umeng.com. All rights reserved.
-
-
-## UMCCommonLog
-
-Copyright 2011 - 2018 umeng.com. All rights reserved.
-
-
-## UMCommon
-
-Copyright 2011 - 2020 umeng.com. All rights reserved.
-
-
-## UMDevice
-
-Copyright 2011 - 2020 umeng.com. All rights reserved.
-
-
 ## WMPageController
 
 The MIT License (MIT)

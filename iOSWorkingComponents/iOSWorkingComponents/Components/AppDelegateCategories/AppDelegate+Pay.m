@@ -9,7 +9,7 @@
 #import "AppDelegate+Pay.h"
 #import <WXApi.h>
 #import "AppKeyConst.h"
-#import <UMCommon/UMCommon.h>
+//#import <UMCommon/UMCommon.h>
 //#import <UMShare/UMShare.h>
 #import <AlipaySDK/AlipaySDK.h>
 #import "WXApiManager.h"

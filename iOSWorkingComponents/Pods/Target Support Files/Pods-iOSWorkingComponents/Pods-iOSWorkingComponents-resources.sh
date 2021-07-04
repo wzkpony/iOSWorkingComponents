@@ -99,12 +99,10 @@ EOM
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/AlipaySDK-iOS/AlipaySDK.bundle"
   install_resource "${PODS_ROOT}/CL_ShanYanSDK/framework/sdk_oauth.bundle"
-  install_resource "${PODS_ROOT}/UMCCommonLog/UMCommonLog/UMCommonLog.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/AlipaySDK-iOS/AlipaySDK.bundle"
   install_resource "${PODS_ROOT}/CL_ShanYanSDK/framework/sdk_oauth.bundle"
-  install_resource "${PODS_ROOT}/UMCCommonLog/UMCommonLog/UMCommonLog.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

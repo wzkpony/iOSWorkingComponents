@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "iOSWorkingComponents"
-  spec.version      = "0.1.2"
+  spec.version      = "0.1.3"
   spec.summary      = "iOSWorkingComponentsiOS开发组件"
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/wzkpony/iOSWorkingComponents.git", :tag => "0.1.2" }
+  spec.source       = { :git => "https://github.com/wzkpony/iOSWorkingComponents.git", :tag => "0.1.3" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -324,10 +324,6 @@ Pod::Spec.new do |spec|
    spec.ios.dependency 'AFNetworking','~> 3.0' 
 
    spec.ios.dependency 'MBProgressHUD','1.1.0'
-   spec.ios.dependency 'UMCCommon' 
-   spec.ios.dependency 'UMCShare/Social/ReducedWeChat' 
-   spec.ios.dependency 'UMCShare/Social/ReducedQQ'
-   spec.ios.dependency 'UMCShare/Social/ReducedSina'
 
    spec.ios.dependency 'MJRefresh'
    spec.ios.dependency 'IQKeyboardManager'
@@ -351,10 +347,7 @@ Pod::Spec.new do |spec|
 
    spec.ios.dependency 'TTGTagCollectionView'
    spec.ios.dependency 'CocoaLumberjack'
-   spec.ios.dependency 'UMCommon'
-   spec.ios.dependency 'UMDevice'
-   spec.ios.dependency 'UMAPM'
-   spec.ios.dependency 'UMCCommonLog'
+   
    spec.ios.dependency 'WechatOpenSDK'
 
 

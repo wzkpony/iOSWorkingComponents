@@ -55,8 +55,8 @@ target 'iOSWorkingComponents' do
   
   
   # 友盟的依赖库，也是基库，下边关于友盟的所有框架都是需要这两个依赖库
-  pod 'UMCommon'#友盟功能库
-  pod 'UMDevice'
+  # pod 'UMCommon'#友盟功能库
+  #pod 'UMDevice'
 
   #pod 'UMCSecurityPlugins'#友盟安全库
   # 友盟的功能模块SDK---
@@ -69,8 +69,8 @@ target 'iOSWorkingComponents' do
   ## 集成支付宝
   #pod 'UMCShare/Social/AlipayShare'
   ## 统计SDK
-  pod 'UMAPM'
-  pod 'UMCCommonLog'
+  #pod 'UMAPM'
+  #pod 'UMCCommonLog'
   
   pod 'WechatOpenSDK'
   

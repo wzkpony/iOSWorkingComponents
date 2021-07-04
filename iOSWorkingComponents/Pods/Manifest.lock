@@ -193,11 +193,6 @@ PODS:
   - TTTAttributedLabel (2.0.0)
   - TYCyclePagerView (1.2.0)
   - TZImagePickerController (3.3.1)
-  - UMAPM (1.2.1)
-  - UMCCommonLog (2.0.0)
-  - UMCommon (7.2.9):
-    - UMDevice
-  - UMDevice (1.2.0)
   - WebViewJavascriptBridge (6.0.3)
   - WechatOpenSDK (1.8.4)
   - WMPageController (2.3.0)
@@ -241,10 +236,6 @@ DEPENDENCIES:
   - TTTAttributedLabel
   - TYCyclePagerView
   - TZImagePickerController
-  - UMAPM
-  - UMCCommonLog
-  - UMCommon
-  - UMDevice
   - WebViewJavascriptBridge (~> 6.0)
   - WechatOpenSDK
   - WMPageController (= 2.3.0)
@@ -286,10 +277,6 @@ SPEC REPOS:
     - TTTAttributedLabel
     - TYCyclePagerView
     - TZImagePickerController
-    - UMAPM
-    - UMCCommonLog
-    - UMCommon
-    - UMDevice
     - WebViewJavascriptBridge
     - WechatOpenSDK
     - WMPageController
@@ -330,10 +317,6 @@ SPEC CHECKSUMS:
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   TYCyclePagerView: 2b051dade0615c70784aa34f40c646feeddb7344
   TZImagePickerController: 99f03b64145a8c92c55b9b1b931410967d9be4cb
-  UMAPM: 58a98390bbb593b9d008f16a403ecd6c550229fd
-  UMCCommonLog: 9b7ddde5d14a52fc1986ba5ac3121b8b2f433638
-  UMCommon: 28a05184e0766ea2c015ce9c56963356a38f9b1b
-  UMDevice: da050ba77e5075b1ec08303065722d25f599e483
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   WechatOpenSDK: 9b721089507c895d05f997408c30bb6e6f5f9b60
   WMPageController: 9f219bb8912a1a1f51af11fde61e2682a7b7e7f2
@@ -343,6 +326,6 @@ SPEC CHECKSUMS:
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: ce5f3bd99b4e9f753d2b68edd90b43dfb0a93514
+PODFILE CHECKSUM: 01428b9f985382bc0c4e44d2004d1282af7c2961
 
 COCOAPODS: 1.10.0

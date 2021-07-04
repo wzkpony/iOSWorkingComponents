@@ -9,7 +9,7 @@
  配置和参考代码：https://developer.umeng.com/docs/66632/detail/66898
  */
 #import <UIKit/UIKit.h>
-#import <UMCommon/UMCommon.h>
+//#import <UMCommon/UMCommon.h>
 //#import <UMShare/UMShare.h>
 
 NS_ASSUME_NONNULL_BEGIN
