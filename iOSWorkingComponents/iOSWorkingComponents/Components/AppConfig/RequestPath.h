@@ -16,7 +16,7 @@
 //API地址
 #define App_BASE_URL @"http://40.73.68.41:5555/GPTest"
 
-#define limit @"10"    //每页个数
+#define limitPage @"10"    //每页个数
 
 #define login_userInfo  @"/api/data/v9.0/systemusers"
 
