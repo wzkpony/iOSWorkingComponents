@@ -225,8 +225,8 @@
 /** 提示 */
 - (void)alertMessage:(NSString *)message
 {
-    UIAlertView *alertView=[[UIAlertView alloc]initWithTitle:@"提示" message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-    [alertView show];
+//    UIAlertView *alertView=[[UIAlertView alloc]initWithTitle:@"提示" message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+//    [alertView show];
 }
 
 /** setter getter */

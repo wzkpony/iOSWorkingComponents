@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**数组字典转json字符串*/
 + (NSString*)stringToJsonData:(NSDictionary *)object;
 //url编码
-+ (NSString *)urlEncoding:(NSString *)stringURL;
+//+ (NSString *)urlEncoding:(NSString *)stringURL;
 @end
 
 NS_ASSUME_NONNULL_END
