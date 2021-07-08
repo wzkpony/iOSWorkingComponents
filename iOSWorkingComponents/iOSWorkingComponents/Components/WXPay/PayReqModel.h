@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <WXApi.h>
+#import "WXApi.h"
 #import "WXApiManager.h"
 @interface PayReqModel : NSObject
 //"appid": "wx8424ea6d1a2919d3",

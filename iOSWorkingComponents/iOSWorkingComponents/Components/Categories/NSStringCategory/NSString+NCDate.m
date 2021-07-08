@@ -7,7 +7,7 @@
 //
 
 #import "NSString+NCDate.h"
-#import <JKCategories.h>
+#import "JKCategories.h"
 @implementation NSString (NCDate)
 +(NSTimeInterval)timeIntervalFromTimeStr:(NSString *)timeStr withFormater:(NSString *)formater{
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
