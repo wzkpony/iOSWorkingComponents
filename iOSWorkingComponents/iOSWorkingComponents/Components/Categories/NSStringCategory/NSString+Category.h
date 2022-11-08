@@ -92,7 +92,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 ///删除线富文本
 + (NSMutableAttributedString *)attributedString:(NSString *)string;
-
++ (NSMutableAttributedString *)attributedString:(NSString *)string lineColor:(UIColor *)lineColor;
+///预售
++ (NSMutableAttributedString *)attributedWillSellString:(NSString *)string imgName:(NSString *)img top:(CGFloat)top;
 + (NSMutableAttributedString *)attributedSelfYingString:(NSString *)string;
 
 + (NSMutableAttributedString *)attributedSelfYingString:(NSString *)string top:(CGFloat)top;
@@ -102,12 +104,17 @@ NS_ASSUME_NONNULL_BEGIN
 ///字体设置
 + (NSMutableAttributedString *)attributedTextString:(NSString *)string withFirseRange:(NSRange)firstRange withFirstTextColor:(UIColor *)firstTextColor withFirstFont:(UIFont *)firstFont withTwoRange:(NSRange)Tworange withTwoColor:(UIColor *)twoColor withTwoFont:(UIFont *)twoFont;
 
+///价格字体
++ (NSMutableAttributedString *)moneyAttributeStringForString:(NSString *)moneyStr font1:(CGFloat)font1 fontNum:(CGFloat)fontNum fontDes:(CGFloat)fontDes;
+
 
 + (NSMutableAttributedString *)attributedSelfDotString:(NSString *)string top:(CGFloat)top;
 
 ///段落设置
 + (NSMutableAttributedString *)attributeTextStringParagraph:(NSString *)string;
 
+///时间倒计时字体设置
++ (NSMutableAttributedString *)attributedDateTimeString:(NSString *)string;
 @end
 
 NS_ASSUME_NONNULL_END

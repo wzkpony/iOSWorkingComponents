@@ -6,7 +6,7 @@
 //  Copyright © 2015年 kingsic. All rights reserved.
 //
 
-#import "MBProgressHUD.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface MBProgressHUD (SGQRCode)
 

@@ -9,9 +9,6 @@
 #import "NSString+Category.h"
 #import <SAMKeychain/SAMKeychain.h>
 #import "CustomConst.h"
-#import "ColorConfig.h"
-#import "JKCategories.h"
-#import "FontConfig.h"
 
 static CGFloat const kTextLineSpace = 0;
 
@@ -494,9 +491,48 @@ static CGFloat const kTextLineSpace = 0;
     
     NSRange range = NSMakeRange(0, string.length);
     [priceAttributed addAttribute:NSStrikethroughStyleAttributeName value:@(1) range:range];
-    [priceAttributed addAttribute:NSStrikethroughColorAttributeName value:[UIColor jk_colorWithHexString:(@"#999999")] range:range];
+    [priceAttributed addAttribute:NSStrikethroughColorAttributeName value:App_999999 range:range];
 //    [priceAttributed addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:10] range:range];
     return priceAttributed;
+}
+///删除线
++ (NSMutableAttributedString *)attributedString:(NSString *)string lineColor:(UIColor *)lineColor {
+    if ([string isEqualToString:@"¥"] || App_IsEmpty(string) || [string containsString:@"null"] || [string isEqualToString:@"¥(null)"]) {
+        return [[NSMutableAttributedString alloc]initWithString:@""];
+    }
+    NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
+    
+    NSRange range = NSMakeRange(0, string.length);
+    [priceAttributed addAttribute:NSStrikethroughStyleAttributeName value:@(1) range:range];
+    [priceAttributed addAttribute:NSStrikethroughColorAttributeName value:lineColor range:range];
+//    [priceAttributed addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:10] range:range];
+    return priceAttributed;
+}
+
+
+///预售
++ (NSMutableAttributedString *)attributedWillSellString:(NSString *)string imgName:(NSString *)img top:(CGFloat)top {
+    if (App_IsEmpty(string) || [string containsString:@"null"]|| [string isEqualToString:@"¥(null)"]) {
+        string =  @"";
+        NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
+        return priceAttributed;
+    }
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+
+    NSTextAttachment *attchment = [[NSTextAttachment alloc]init];
+
+    attchment.bounds = CGRectMake(0, top, 44, 15);//设置frame
+
+    attchment.image = [UIImage imageNamed:img];//设置图片
+
+        
+    NSAttributedString *content = [NSAttributedString attributedStringWithAttachment:(NSTextAttachment *)(attchment)];
+
+    [attributedString insertAttributedString:content atIndex:0];//插入到第几个下标
+
+//    [attributedString appendAttributedString:content]; //添加到尾部
+
+    return attributedString;
 }
 
 ///自营
@@ -510,7 +546,7 @@ static CGFloat const kTextLineSpace = 0;
 
     NSTextAttachment *attchment = [[NSTextAttachment alloc]init];
 
-    attchment.bounds = CGRectMake(0, -1, 28, 14);//设置frame
+    attchment.bounds = CGRectMake(0, -1, 26, 16);//设置frame
 
     attchment.image = [UIImage imageNamed:@"ziying"];//设置图片
 
@@ -535,7 +571,7 @@ static CGFloat const kTextLineSpace = 0;
 
     NSTextAttachment *attchment = [[NSTextAttachment alloc]init];
 
-    attchment.bounds = CGRectMake(0, top, 28, 14);//设置frame
+    attchment.bounds = CGRectMake(0, top, 26, 16);//设置frame
 
     attchment.image = [UIImage imageNamed:@"ziying"];//设置图片
 
@@ -604,8 +640,10 @@ static CGFloat const kTextLineSpace = 0;
 ///字体设置
 + (NSMutableAttributedString *)attributedTextString:(NSString *)string withFirseRange:(NSRange)firstRange withFirstTextColor:(UIColor *)firstTextColor withFirstFont:(UIFont *)firstFont withTwoRange:(NSRange)Tworange withTwoColor:(UIColor *)twoColor withTwoFont:(UIFont *)twoFont {
 
-    if (App_IsEmpty(string) || [string containsString:@"null"]
-        ||[string isEqualToString:@"¥"]|| [string isEqualToString:@"¥(null)"]) {
+    if (App_IsEmpty(string) || [string containsString:@"null"]||
+        [string isEqualToString:@"¥"]||
+        [string isEqualToString:@"¥(null)"] ||
+        [string isEqualToString:@"¥ 起"]) {
         string =  @"";
         NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
         return priceAttributed;
@@ -622,6 +660,31 @@ static CGFloat const kTextLineSpace = 0;
     return priceAttributed;
 }
 
+///价格字体
++ (NSMutableAttributedString *)moneyAttributeStringForString:(NSString *)moneyStr font1:(CGFloat)font1 fontNum:(CGFloat)fontNum fontDes:(CGFloat)fontDes  {
+    if ([moneyStr containsString:@"¥"] == NO) {
+        moneyStr = [NSString stringWithFormat:@"¥%@",moneyStr];
+    }
+    NSMutableAttributedString *moneyAttr = [NSString attributedTextString:moneyStr withFirseRange:NSMakeRange(0, 1) withFirstTextColor:App_UICOLOR_HEX(@"#FC3455") withFirstFont:App_DIN_Bold_FONT(font1) withTwoRange:NSMakeRange(1, moneyStr.length-1) withTwoColor:App_UICOLOR_HEX(@"#FC3455") withTwoFont:App_DIN_Bold_FONT(fontNum)];
+    if ([moneyStr containsString:@"."]) {
+        NSRange dotRange = [moneyStr rangeOfString:@"."];
+        NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:moneyStr];
+        
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_UICOLOR_HEX(@"#FC3455") range:NSMakeRange(0, 1)];
+        [priceAttributed addAttribute:NSFontAttributeName value:App_DIN_Bold_FONT(font1) range:NSMakeRange(0, 1)];
+        
+        
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_UICOLOR_HEX(@"#FC3455") range:NSMakeRange(1, dotRange.location)];
+        [priceAttributed addAttribute:NSFontAttributeName value:App_DIN_Bold_FONT(fontNum) range:NSMakeRange(1, dotRange.location)];
+        
+        
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_UICOLOR_HEX(@"#FC3455") range:NSMakeRange(dotRange.location, moneyStr.length - dotRange.location)];
+        [priceAttributed addAttribute:NSFontAttributeName value:App_DIN_Bold_FONT(fontDes) range:NSMakeRange(dotRange.location, moneyStr.length - dotRange.location)];
+        moneyAttr = priceAttributed;
+        
+    }
+    return moneyAttr;
+}
 
 ///段落设置
 + (NSMutableAttributedString *)attributeTextStringParagraph:(NSString *)string {
@@ -636,12 +699,41 @@ static CGFloat const kTextLineSpace = 0;
     
     [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [string length])];
     
-    [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#333333")] range:NSMakeRange(0, string.length)];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:App_333333 range:NSMakeRange(0, string.length)];
 
     [attributedString addAttribute:NSFontAttributeName value:App_SystemFont(15) range:NSMakeRange(0, string.length)];
     
     return attributedString;
 
+}
+
+
+///时间倒计时字体设置
++ (NSMutableAttributedString *)attributedDateTimeString:(NSString *)string {
+
+    if (App_IsEmpty(string) || [string containsString:@"null"]
+        ||[string isEqualToString:@"¥"]|| [string isEqualToString:@"¥(null)"]) {
+        string =  @"";
+        NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
+        return priceAttributed;
+    }
+    
+    NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
+    
+    [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_UICOLOR_HEX(@"#FC3455") range:NSMakeRange(0, 4)];
+    [priceAttributed addAttribute:NSFontAttributeName value:App_SystemFont(13) range:NSMakeRange(0, 4)];
+    
+    [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_UICOLOR_HEX(@"#FC3455") range:NSMakeRange(5, 4)];
+    [priceAttributed addAttribute:NSFontAttributeName value:App_SystemFont(13) range:NSMakeRange(5, 4)];
+    
+    [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_UICOLOR_HEX(@"#FC3455") range:NSMakeRange(10, 4)];
+    [priceAttributed addAttribute:NSFontAttributeName value:App_SystemFont(13) range:NSMakeRange(10, 4)];
+
+    [priceAttributed addAttribute:NSBackgroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, 4)];
+    [priceAttributed addAttribute:NSBackgroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(5, 4)];
+    [priceAttributed addAttribute:NSBackgroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(10, 4)];
+    
+    return priceAttributed;
 }
 
 

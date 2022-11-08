@@ -30,10 +30,10 @@
     return jsonString;
 }
 //url编码
-//+ (NSString *)urlEncoding:(NSString *)stringURL
-//{
-////    return (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)stringURL, nil, nil, kCFStringEncodingUTF8));
-//    NSString * encodingString = [stringURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//    return encodingString;
-//}
++ (NSString *)urlEncoding:(NSString *)stringURL
+{
+//    return (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)stringURL, nil, nil, kCFStringEncodingUTF8));
+    NSString * encodingString = [stringURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return encodingString;
+}
 @end

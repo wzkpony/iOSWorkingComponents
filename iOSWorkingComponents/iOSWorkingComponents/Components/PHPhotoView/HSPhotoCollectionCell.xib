@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HSPhotoCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hDe-wt-FTi">
+                        <rect key="frame" x="10" y="4" width="46" height="46"/>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="46" id="Rmo-Bc-jk8"/>
+                            <constraint firstAttribute="width" constant="46" id="wcd-Xr-xie"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWh-yg-V7X">
+                        <rect key="frame" x="62" y="0.0" width="252" height="54"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hDe-wt-FTi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="BPo-fa-Dfn"/>
+                    <constraint firstAttribute="bottom" secondItem="UWh-yg-V7X" secondAttribute="bottom" id="Qff-9m-c3V"/>
+                    <constraint firstItem="UWh-yg-V7X" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QtP-jg-zmL"/>
+                    <constraint firstAttribute="trailing" secondItem="UWh-yg-V7X" secondAttribute="trailing" constant="6" id="X6L-96-Qqh"/>
+                    <constraint firstItem="UWh-yg-V7X" firstAttribute="leading" secondItem="hDe-wt-FTi" secondAttribute="trailing" constant="6" id="oAo-5N-PZu"/>
+                    <constraint firstAttribute="bottom" secondItem="hDe-wt-FTi" secondAttribute="bottom" constant="4" id="q7d-sb-PQi"/>
+                    <constraint firstItem="hDe-wt-FTi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="quJ-jz-5oZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="headImageView" destination="hDe-wt-FTi" id="l9S-tE-z7r"/>
+                <outlet property="nameLabel" destination="UWh-yg-V7X" id="OVq-TL-yTY"/>
+            </connections>
+            <point key="canvasLocation" x="306" y="30"/>
+        </tableViewCell>
+    </objects>
+</document>

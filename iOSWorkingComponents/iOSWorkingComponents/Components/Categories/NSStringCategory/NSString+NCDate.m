@@ -7,7 +7,7 @@
 //
 
 #import "NSString+NCDate.h"
-#import "JKCategories.h"
+
 @implementation NSString (NCDate)
 +(NSTimeInterval)timeIntervalFromTimeStr:(NSString *)timeStr withFormater:(NSString *)formater{
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
@@ -288,19 +288,55 @@
     return [NSString stringWithFormat:@"%@天%@时%@分%@秒",dayStr,hoursStr,minuteStr,secondStr];
 }
 
+
+// 将秒转换为时间,含天数
++ (NSString *)secondTransToDateHMS:(NSInteger)totalSecond{
+    NSInteger second = totalSecond % 60;
+    NSInteger minute = (totalSecond / 60) % 60;
+    NSInteger hours = (totalSecond / 3600);
+        
+    //初始化
+    NSString *secondStr = [NSString stringWithFormat:@"%ld",(long)second];
+    NSString *minuteStr = [NSString stringWithFormat:@"%ld",(long)minute];
+    NSString *hoursStr = [NSString stringWithFormat:@"%ld",(long)hours];
+    if (second < 10) {
+        secondStr = [NSString stringWithFormat:@"0%ld",(long)second];
+    }
+    if (minute < 10) {
+        minuteStr = [NSString stringWithFormat:@"0%ld",(long)minute];
+    }
+    if (hours < 10) {
+        hoursStr = [NSString stringWithFormat:@"0%ld",(long)hours];
+    }
+    
+    if (second <= 0) {
+        secondStr = @"00";
+    }
+    if (minute <= 0) {
+        minuteStr = @"00";
+    }
+    if (hours <= 0) {
+        hoursStr = @"00";
+    }
+    return [NSString stringWithFormat:@"%@:%@:%@",hoursStr,minuteStr,secondStr];
+}
+
+
+
+
 + (NSAttributedString *)attStringSecondTransToDate:(NSInteger)totalSecond {
     NSString *string = [self secondTransToDate:totalSecond];
     if ([string containsString:@"天"]) {
         
         NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(0, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(0, 2)];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(3, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(3, 2)];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(6, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(6, 2)];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(9, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(9, 2)];
 
         return priceAttributed;
 
@@ -308,11 +344,11 @@
     else if ([string containsString:@"时"]){
         NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(0, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(0, 2)];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(3, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(3, 2)];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(6, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(6, 2)];
         
         return priceAttributed;
         
@@ -320,16 +356,16 @@
     else if ([string containsString:@"分"]){
         NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(0, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(0, 2)];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(3, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(3, 2)];
                 
         return priceAttributed;
     }
     else {
         NSMutableAttributedString *priceAttributed = [[NSMutableAttributedString alloc]initWithString:string];
         
-        [priceAttributed addAttribute:NSForegroundColorAttributeName value:[UIColor jk_colorWithHexString:(@"#2F7CFE")] range:NSMakeRange(0, 2)];
+        [priceAttributed addAttribute:NSForegroundColorAttributeName value:App_ThemeColor range:NSMakeRange(0, 2)];
                         
         return priceAttributed;
     }
@@ -376,7 +412,7 @@
     return  result;
 }
 
-
+// 时间差
 + (NSString *)compareTodayDateCurrentTime:(NSString *)str {
     
     //把字符串转为NSdate
@@ -386,10 +422,19 @@
 //    NSLog(@"str=%@\ndate=%@",str,timeDate);
     //得到与当前时间差
     NSTimeInterval  timeInterval = [timeDate timeIntervalSinceNow];
-    NSString *result = [NSString secondTransToDate:timeInterval];
+    NSString *result = [NSString secondTransToDateHMS:timeInterval];
     return  result;
 }
 
+// 时间差
++ (NSTimeInterval)compareTodayDateCurrentTimeTemp:(NSTimeInterval )time {
+        
+    NSDate *timeDate = [NSDate dateWithTimeIntervalSince1970:time];
+    //得到与当前时间差
+    NSTimeInterval  timeInterval = [timeDate timeIntervalSinceNow];
+//    NSString *result = [NSString secondTransToDateHMS:timeInterval];
+    return  timeInterval;
+}
 
 /** 通过行数, 返回更新时间 */
 //- (NSString *)updateTimeForRow:(NSInteger)row {

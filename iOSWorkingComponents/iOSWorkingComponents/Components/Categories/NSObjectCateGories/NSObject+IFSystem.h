@@ -20,8 +20,15 @@ NS_ASSUME_NONNULL_BEGIN
  return MFMailComposeViewController //邮箱的VC
  */
 + (MFMailComposeViewController *)launchMailAppDelegateRecipients:(NSArray<NSString *> *)recipients subject:(NSString *)subject messageBody:(NSString *)messageBody delegate:(id<MFMailComposeViewControllerDelegate>)obj;
+
 ///获取当前的VC
 - (UIViewController *)getCurrentVC;
+
+///限制字符长度
+- (void)textFieldDidChange:(UITextField *)textField interger:(NSUInteger)integer;
+
+#pragma  mark -- 选择照片 照片的逻辑开始 --
+//- (void)showAlertViewForPic;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Eve. All rights reserved.
 //
 
-#import "MBProgressHUD.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface MBProgressHUD (LL)
 

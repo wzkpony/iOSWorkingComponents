@@ -41,7 +41,8 @@
 
 
 + (NSString *)compareCurrentTime:(NSString *)str;
-
+/// 时间差
 + (NSString *)compareTodayDateCurrentTime:(NSString *)str;
-
+// 时间差
++ (NSTimeInterval )compareTodayDateCurrentTimeTemp:(NSTimeInterval )time;
 @end
